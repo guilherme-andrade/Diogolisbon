@@ -141,21 +141,26 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 -->
 </head>
 
-<body class="clearfix" data-spy="scroll" data-target=".navbar" data-offset="40" id="about">
+<body class="clearfix">
 
-	<header id="header">
+
+
+   
+
+	<header id="top">
 
 		<div class="container">
 
 				<a id="logo" class="logo" href="index.html">Diogo Fernandes</a>
 				<div class="icon-nav">navigation</div>
 				
-				<nav>
+				<nav class="navbar">
+
 
 					<ul id="nav"  >
 						<li class="about is the current_page_item"><a href="index.html" aria-current="page">about</a></li>
                         <li class="some of the projects"><a href="portfolio/indexPortfolio.html">portfolio</a></li>
-                        <li class="Repositories"><a href="https://github.com/Diogolisbon">Git Hub</a></li>
+                        <li class="Repositories"><a href="certificates.html">certificates</a></li>
                         <li class="contacts"><a href="contact.html">contact</a></li>
  
 
@@ -163,7 +168,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 							<ul class="social">
 								<li class="email"><span id="email-tooltip" tooltip="Click to copy my email address to your clipboard 😀"><a id="email" data-clipboard-text="diogo.jmf@outlook.com">email</a></span></li> 
 								<li class="linkedin"><a href="https://linkedin.com" title="Connect with me on Linkedin" target="_blank">linkedin</a></li>
-								<li class="Git Hub"><a href="https://github.com/Diogolisbon" title="My repositories" target="_blank">Git Hub</a></li>
+								<li class="Git Hub"><a href="https://github.com/Diogolisbon" title="My certificates" target="_blank">Git Hub</a></li>
 								<li class="instagram"><a href="https://www.instagram.com/diogo.matos.fernandes" title="Follow me on Instagram" target="_blank">instagram</a></li>
 								
 							</ul>
@@ -178,6 +183,72 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</div>
 
 	</header>  
+<style>/*
+    .container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+     justify-content: space-between;
+    top: 0;
+    left: 0;
+    right:0; 
+    background-color: #000000; 
+    padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 0px;
+  }*/
+
+  header#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  z-index: 9999; 
+}
+
+
+  .container {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 25px; 
+  padding-right: 20px;
+  top: 0;
+    left: 0;
+    right:0;
+}
+
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 50px;
+    background-color: #000000;
+  }
+/*
+  ul.social {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+ul.social li {
+  list-style: none;
+  margin-right: 20px; /* Add some margin to the right of the social icons */
+}*/
+  
+
+  
+</style>
+    
 
 	<div class="content about clearfix">
 
@@ -382,7 +453,6 @@ var wpcf7 = {"api":{"root":"https:\/\/www.adhamdannaway.com\/wp-json\/","namespa
 <script src="https://www.adhamdannaway.com/wp-content/themes/dannaway/js/clipboard.js-master/dist/clipboard.min.js"></script>
 <script src="https://www.adhamdannaway.com/wp-content/themes/dannaway/js/script.js"></script>
 <script type="text/javascript">
-<!--
 
 //If browser is IE8 or older we show IE specific page
 if(ie < 9){
@@ -419,7 +489,8 @@ $(document).ready(function() {
 	// Function to animate when leaving page
 	$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
 
-	// Animate the header on first			
+	// Animate the header on first
+    	
 	$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
 
 
