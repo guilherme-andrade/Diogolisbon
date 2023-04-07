@@ -1194,13 +1194,6 @@ function animateMain() {
 
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
-	
-	$('#snaps').css({'visibility':'visible', 'opacity':'1'});
-	$('#snaps-1').css({'visibility':'visible', 'top':'50px'}).stop().delay(300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
-	$('#snaps-2').css({'visibility':'visible', 'top':'50px'}).stop().delay(500).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
-	$('#snaps-3').css({'visibility':'visible', 'top':'50px'}).stop().delay(700).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
-	$('#snaps-4').css({'visibility':'visible', 'top':'50px'}).stop().delay(900).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
-	$('#snaps-5').css({'visibility':'visible', 'top':'50px'}).stop().delay(1100).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
 	$('#snaps-6').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack',  function(){ animateContent(); });
 
 };
