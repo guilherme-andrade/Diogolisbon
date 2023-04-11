@@ -1073,6 +1073,7 @@ hr {
 
 
 /* snaps */
+
 .snaps {
   border-top: #dddddd 1px soid;
   padding-top: 4.8rem;
@@ -1081,7 +1082,7 @@ hr {
 
 .snaps a {
   width: 44%;
-  margin: 2% 4% 2% 0;
+  margin: 2% 4% 0 2%;
   float: left;
   text-decoration: none;
   padding: 2%;
@@ -1094,8 +1095,10 @@ hr {
   -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
+  
 }
 .snaps a img {
+
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1104,8 +1107,9 @@ hr {
   background-clip: padding-box;
   width: 100%;
   margin-bottom: 0;
+  
 }
-.snaps a:nth-child(2n),
+.snaps a:nth-child(0n),
 .snaps a:last-child {
   margin-right: 0;
 }
@@ -1114,6 +1118,10 @@ hr {
   -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
 /* Social Disc Icons */
 .social-disc {
   list-style-type: none;
