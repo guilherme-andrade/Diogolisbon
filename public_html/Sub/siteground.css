@@ -149,21 +149,24 @@ margin-right: 20px; /* Add some margin to the right of the social icons
   height: 500px;
   margin: 10px auto ;
   perspective: 600px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
 }
 
 .card {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
+  left: 0;
   transform-style: preserve-3d;
   overflow: hidden;
   border-radius: 0;
-  padding: 6.4rem 3.2rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: padding: 2rem 3.2rem 6.4rem 3.2rem;;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  animation: spin 4s linear infinite;
 }
 
 .card__img {
@@ -192,6 +195,32 @@ margin-right: 20px; /* Add some margin to the right of the social icons
 .card:hover .card__img--back {
   transform: rotateY(0deg);
 }
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+/*tooltip in snaps*/
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 
 /* */
 .clearfix,
@@ -747,6 +776,10 @@ section.light {
 .text-main {
   position: relative;
 }
+
+.text-sec {
+  position: right;
+}
 img {
   max-width: 100%;
   position: relative;
@@ -1070,22 +1103,33 @@ hr {
 .syntaxhighlighter .toolbar {
   display: none !important;
 }
-
+/*tootil*/
+.tooltip {
+  position: absolute;
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
 
 /* snaps */
 
 .snaps {
   border-top: #dddddd 1px soid;
   padding-top: 4.8rem;
+  padding-top: 3.2rem;
   margin: auto;
+  min-width: 350px;
 }
 
 .snaps a {
-  width: 44%;
-  margin: 2% 4% 0 2%;
+  width: 30%;
+  margin: 2% 4% 0% 2%;
+  padding: 2%;
   float: left;
   text-decoration: none;
-  padding: 2%;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -1097,6 +1141,7 @@ hr {
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
   
 }
+
 .snaps a img {
 
   -webkit-border-radius: 4px;
@@ -1106,10 +1151,15 @@ hr {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   width: 100%;
+  height: auto;
   margin-bottom: 0;
+  
   
 }
 .snaps a:nth-child(0n),
+.snaps a:nth-child(3n) {
+  margin-right: 2%;
+}
 .snaps a:last-child {
   margin-right: 0;
 }
@@ -1118,9 +1168,23 @@ hr {
   -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
+/*
+.snaps {
+  padding-top: 3.2rem;
+}
+.snaps a {
+  width: 14%;
+  margin: 0 2% 0 0;
+  padding: 0.5%;
+}
+.snaps a:nth-child(3n) {
+  margin-right: 2%;
+}
+.snaps a:last-child {
+  margin-right: 0;
+}
 
-
-
+*/
 
 /* Social Disc Icons */
 .social-disc {
@@ -1749,13 +1813,13 @@ button:active,
 .js #designer-bg,
 .js #img-main,
 .js #text-main,
-.js #snaps,
+.js #snaps,/*
 .js #snaps-1,
 .js #snaps-2,
 .js #snaps-3,
 .js #snaps-4,
 .js #snaps-5,
-.js #snaps-6,
+.js #snaps-6,*/
 .js #img-0,
 .js #img-1,
 .js #img-2,
@@ -2734,20 +2798,7 @@ button:active,
     margin-bottom: 0 !important;
   }
   /* snaps */
-  .snaps {
-    padding-top: 3.2rem;
-  }
-  .snaps a {
-    width: 14%;
-    margin: 0 2% 0 0;
-    padding: 0.5%;
-  }
-  .snaps a:nth-child(3n) {
-    margin-right: 2%;
-  }
-  .snaps a:last-child {
-    margin-right: 0;
-  }
+  
   /* Pie chart */
   .pie-chart .designer,
   .pie-chart .coder {
@@ -2793,6 +2844,12 @@ button:active,
   .text-middle {
     padding-top: 3.2rem;
   }
+
+  .text-sec,
+  .text-right {
+    padding-top: 3.2rem;
+  }
+
   .portfolio .text-main,
   .portfolio .text-middle {
     padding-top: 6.4rem;

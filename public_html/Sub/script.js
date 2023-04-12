@@ -1194,8 +1194,8 @@ function animateMain() {
 
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
-	$('#snaps-6').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack',  function(){ animateContent(); });
-
+	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 1000, 'easeOutBack',  function(){ animateContent(); });
+	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 };
 
 
@@ -1206,7 +1206,9 @@ function animatePage() {
 
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo', function(){ animateContent(); });
-	
+	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack',  function(){ animateContent(); });
+	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
+};
 };
 
 /* 
@@ -1366,7 +1368,30 @@ function animateFeatured() {
 	   triggerOnce: true
 	});
 
+	//cards
+	$('#card').waypoint(function(event, direction) {
+		$('#card').css({'visibility':'visible', 'left': '50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
+	  }, {
+		offset: '80%',
+		triggerOnce: true
+	  });
+	  
+	  $('.scene.scene--card').waypoint(function(event, direction) {
+		$('.scene.scene--card').css({'visibility':'visible', 'left': '50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
+	  }, {
+		offset: '80%',
+		triggerOnce: true
+	  });
+	  
+	  // animate the card element when it enters the viewport
+$('.scene--card').waypoint(function() {
+	$(this.element).find('.card').css('visibility', 'visible').addClass('animated fadeInRight');
+  }, { offset: '50%' });
+  
+
 };
+
+//snaps tooltip
 
 /* 
 * Function to animate face
@@ -1484,8 +1509,32 @@ var ie = (function(){
  
 }());
 
+//card images
+const card = document.querySelector('.card');
+const cardImg = card.querySelector('.card__img--front');
+
+// Function to check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to animate the image
+function animateImage() {
+    if (isInViewport(card)) {
+        cardImg.style.transform = 'translateX(200px)';
+        cardImg.style.transition = 'transform 1s ease-in-out';
+        window.removeEventListener('scroll', animateImage);
+    }
+}
 
 
+*/
 /* 
 * Function to print IE page
 */
