@@ -193,7 +193,7 @@ $(document).ready(function() {
 	$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
 
 
-	// Copy email address to clipboard	
+	// Copy email address to clipboard	/*
 	var clipboard = new ClipboardJS('#email');
 
 	clipboard.on('success', function(e) {
@@ -201,7 +201,7 @@ $(document).ready(function() {
 	    $('#email-tooltip').addClass('success');
 
 	    // Reset
-	    $('#email-tooltip').mouseleave(function() {
+	   $('#email-tooltip').mouseleave(function() {
 
 		    setTimeout( function(){
 				$('#email-tooltip').attr("tooltip", "Click to copy my email address to your clipboard 😀");

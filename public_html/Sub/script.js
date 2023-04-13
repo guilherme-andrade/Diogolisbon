@@ -1195,7 +1195,7 @@ function animateMain() {
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
 	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 1000, 'easeOutBack',  function(){ animateContent(); });
-	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
+	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
 };
 
 
@@ -1207,7 +1207,7 @@ function animatePage() {
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo', function(){ animateContent(); });
 	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack',  function(){ animateContent(); });
-	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
+	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
 };
 };
 
@@ -1368,7 +1368,7 @@ function animateFeatured() {
 	   triggerOnce: true
 	});
 
-	//cards
+	//cards/*
 	$('#card').waypoint(function(event, direction) {
 		$('#card').css({'visibility':'visible', 'left': '50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
 	  }, {
@@ -1376,8 +1376,8 @@ function animateFeatured() {
 		triggerOnce: true
 	  });
 	  
-	  $('.scene.scene--card').waypoint(function(event, direction) {
-		$('.scene.scene--card').css({'visibility':'visible', 'left': '50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
+	  $('#scene.scene--card').waypoint(function(event, direction) {
+		$('#scene.scene--card').css({'visibility':'visible', 'left': '50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
 	  }, {
 		offset: '80%',
 		triggerOnce: true
@@ -1388,12 +1388,22 @@ $('.scene--card').waypoint(function() {
 	$(this.element).find('.card').css('visibility', 'visible').addClass('animated fadeInRight');
   }, { offset: '50%' });
   
-
+*/
 };
 
 //snaps tooltip
 
-/* 
+$(document).ready(function() {
+	$(".snap").hover(function() {
+	  $(this).attr("title", ""); // remove the default tooltip
+	  $(this).find("img").css("opacity", "0.5"); // reduce opacity of the image
+	  $(this).find("::before").css("display", "inline-block"); // show the tooltip box
+	}, function() {
+	  $(this).find("img").css("opacity", "1"); // restore opacity of the image
+	  $(this).find("::before").css("display", "none"); // hide the tooltip box
+	});
+  });
+  
 * Function to animate face
 */
 function animateFace() {
