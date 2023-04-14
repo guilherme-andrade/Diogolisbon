@@ -1543,8 +1543,141 @@ function animateImage() {
     }
 }
 
+/*pie chart*/
+/*
+window.addEventListener('scroll', function() {
+	var partCoderHeading = document.getElementById('part-coder-heading');
+	if (window.pageYOffset > partCoderHeading.offsetTop) {
+	  partCoderHeading.classList.add('fixed');
+	} else {
+	  partCoderHeading.classList.remove('fixed');
+	}
+  });
 
+  var coderList = document.getElementById("coder-list");
+
+  function showCoderList() {
+	var listItems = coderList.getElementsByTagName("li");
+	for (var i = 0; i < listItems.length; i++) {
+	  listItems[i].style.opacity = "1";
+	}
+	coderList.classList.add("show");
+  }
+  
+  document.addEventListener("DOMContentLoaded", function(event) { 
+	var coderListPosition = coderList.getBoundingClientRect().top;
+	var windowHeight = window.innerHeight;
+	
+	if (coderListPosition < windowHeight) {
+	  showCoderList();
+	} else {
+	  window.addEventListener("scroll", function() {
+		if (window.pageYOffset >= coderListPosition - windowHeight + 100) {
+		  showCoderList();
+		}
+	  });
+	}
+  });*/
+  /*
+  function isInViewport(element) {
+  var rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+var partCoderHeading = document.getElementById('part-coder-heading');
+
+window.addEventListener('scroll', function() {
+  if (isInViewport(partCoderHeading)) {
+    partCoderHeading.classList.add('falling');
+  } else {
+    partCoderHeading.classList.remove('falling');
+  }
+
+});
+
+var coderList = document.getElementById("coder-list");
+
+function showCoderList() {
+  var listItems = coderList.getElementsByTagName("li");
+  for (var i = 0; i < listItems.length; i++) {
+    listItems[i].style.opacity = "1";
+  }
+  coderList.classList.add("show");
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  var coderListPosition = coderList.getBoundingClientRect().top;
+  var windowHeight = window.innerHeight;
+
+  if (coderListPosition < windowHeight) {
+    showCoderList();
+  } else {
+    window.addEventListener("scroll", function() {
+      if (window.pageYOffset >= coderListPosition - windowHeight + 100) {
+        showCoderList();
 */
+function isInViewport(element) {
+	var rect = element.getBoundingClientRect();
+	return (
+	  rect.top >= 0 &&
+	  rect.left >= 0 &&
+	  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+	  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+	);
+  }
+  
+  var partCoderHeading = document.getElementById('part-coder-heading');
+  var partDesignerHeading = document.getElementById('part-designer-heading');
+  var coderList = document.getElementById("coder-list");
+  var designerList = document.getElementById("designer-list");
+  
+  window.addEventListener('scroll', function() {
+	if (isInViewport(partCoderHeading)) {
+	  partCoderHeading.classList.add('falling');
+	} else {
+	  partCoderHeading.classList.remove('falling');
+	}
+  
+	if (isInViewport(partDesignerHeading)) {
+	  partDesignerHeading.classList.add('falling');
+	} else {
+	  partDesignerHeading.classList.remove('falling');
+	}
+  
+	if (isInViewport(coderList)) {
+	  coderList.classList.add('slide-in');
+	} else {
+	  coderList.classList.remove('slide-in');
+	}
+  
+	if (isInViewport(designerList)) {
+	  designerList.classList.add('slide-in');
+	} else {
+	  designerList.classList.remove('slide-in');
+	}
+  });
+  
+  document.addEventListener("DOMContentLoaded", function(event) {
+	var coderListPosition = coderList.getBoundingClientRect().top;
+	var windowHeight = window.innerHeight;
+  
+	if (coderListPosition < windowHeight) {
+	  coderList.classList.add('slide-in');
+	} 
+  
+	var designerListPosition = designerList.getBoundingClientRect().top;
+  
+	if (designerListPosition < windowHeight) {
+	  designerList.classList.add('slide-in');
+	}
+  });
+  
+
 /* 
 * Function to print IE page
 */
