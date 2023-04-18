@@ -2857,19 +2857,8 @@ button:active,
     }
   }
  /* letters horizontal*/
- #coder-list,
- #designer-list {
-   opacity: 0;
-   transform: translateX(-50px);
-   transition: all 1s ease-in-out;
- }
- 
- .slide-in {
-   opacity: 1;
-   transform: translateX(0);
- }
- 
 
+ /**/
 
   .pie-chart .designer {
     float: left;
