@@ -1196,6 +1196,7 @@ function animateMain() {
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
 	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 1000, 'easeOutBack',  function(){ animateContent(); });
 	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
+	//$('#coder-list').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 };
 
 
@@ -1208,6 +1209,7 @@ function animatePage() {
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo', function(){ animateContent(); });
 	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack',  function(){ animateContent(); });
 	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
+//	$('#coder-list').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 };
 };
 
@@ -1481,6 +1483,7 @@ function animateFace() {
 	
 }; 
 
+//function for the slide in letters in part coder
 
 /* 
 * Function to detect IE

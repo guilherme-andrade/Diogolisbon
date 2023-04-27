@@ -2857,7 +2857,49 @@ button:active,
     }
   }
  /* letters horizontal*/
+ #coder-list li {
+  list-style: none;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slide-in 1s ease-out forwards;
+}
 
+#special-item {
+  animation: slide-in-special 1s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-special {
+  from { opacity: 0; transform: translateX(-100px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+#designer-list {
+  visibility: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#designer-list li {
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
  /**/
 
   .pie-chart .designer {
