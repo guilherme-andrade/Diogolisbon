@@ -2900,7 +2900,60 @@ button:active,
     opacity: 1;
   }
 }
- /**/
+
+#special-message {
+  text-align: center;
+  font-size: 0.8em;
+  position: absolute;
+ bottom: -20px;
+  width: 100%;
+  animation: breath 2s infinite alternate;
+}
+
+@keyframes breath {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+ /*best coding skills letters*/
+
+/* .ul li:hover,*/
+/*#background-word:hover {
+    color: #fff;
+    background-color: #086ff7;
+    padding: 5px;
+    border-radius: 5px;
+}*/
+
+#my-list li {
+  padding-right: 30px;
+  position: relative;
+}
+
+#my-list li:before {
+  content: attr(data-emoji);
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+#my-list li:hover {
+  color: #fff;
+  background-color: #086ff7;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#my-list li:hover:before {
+  display: block;
+}
+
+
 
   .pie-chart .designer {
     float: left;
