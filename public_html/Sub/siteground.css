@@ -2553,7 +2553,7 @@ button:active,
     list-style: none;
     height: 450px;
     position: relative;
-    background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/axis.png) repeat-x;
+   /* background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/axis.png) repeat-x;*/
     padding: 0;
     margin: 0px;
     /* Y Axis */
@@ -2605,7 +2605,7 @@ button:active,
     height: 30%;
   }
   .bar-chart .p-40 {
-    height: 40%;
+    height: 1000%;
   }
   .bar-chart .p-75 {
     height: 75%;
@@ -2665,6 +2665,7 @@ button:active,
     background-image: -ms-linear-gradient(bottom, #bc8e5b, #dcba83);
     background-image: linear-gradient(#dcba83, #bc8e5b);
   }
+  
   .bar-chart .red {
     border-color: #e14949;
     background-color: #ca4544;
@@ -2691,6 +2692,24 @@ button:active,
     font-size: 12px;
     font-size: 1.2rem;
     font-weight: normal;
+  }
+
+  .red {
+    height: 120%;
+  }
+  
+  .red .percent {
+    bottom: 70%;
+    font-size: 60px;
+  }
+  
+  .red .percent span {
+    font-size: 32px;
+  }
+  
+  .red .skill {
+    bottom: 35%;
+    font-size: 16px;
   }
   /* Tooltip styles */
   [tooltip]:after {
@@ -2919,6 +2938,14 @@ button:active,
   }
 }
 
+@media (max-width: 767px) {
+  #special-message {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+}
+
  /*best coding skills letters*/
 
 /* .ul li:hover,*/
@@ -3069,7 +3096,7 @@ button:active,
     width: 59px;
     height: 118px;
     display: block;
-    background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite.png) no-repeat;
+   /* background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite.png) no-repeat;*/
     position: fixed;
     top: 45%;
     text-indent: -9999px;
@@ -3086,7 +3113,7 @@ button:active,
   .prev a {
     position: absolute;
     display: block;
-    background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite.png) no-repeat;
+   /* background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite.png) no-repeat;*/
     width: 59px;
     height: 118px;
     z-index: 10;
@@ -3105,7 +3132,7 @@ button:active,
   .thumbs .arrow-r {
     width: 32px;
     height: 32px;
-    background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite.png) no-repeat;
+   /* background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite.png) no-repeat;*/
     display: block;
     background-position: -63px -107px;
     position: absolute;
@@ -3135,18 +3162,18 @@ button:active,
   /* jQuery Preloader */
   #jpreLoader,
   #qLloader {
-    background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/loader@2x.png) 0 100% no-repeat;
+  /*  background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/loader@2x.png) 0 100% */no-repeat;
     background-size: 200px 100px;
   }
   #jpreBar,
   #qLbar {
-    background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/loader@2x.png) -100px 100% no-repeat;
+   /* background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/loader@2x.png) -100px 100% */no-repeat;
     background-size: 200px 100px;
   }
   .logo,
   .icon-nav,
   .social li a {
-    background-image: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite-mobile@2x.png);
+   /* background-image: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite-mobile@2x.png);*/
     background-size: 200px 500px;
   }
   .social-disc li a,
@@ -3157,7 +3184,7 @@ button:active,
   .next a,
   .prev a,
   .blog .author-profile .avatar {
-    background-image: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite@2x.png);
+   /* background-image: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite@2x.png);*/
     background-size: 200px 1200px;
   }
 }
@@ -3166,7 +3193,7 @@ button:active,
   .logo,
   .social li a,
   .blog .author-profile .avatar {
-    background-image: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite@2x.png);
+   /* background-image: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite@2x.png);*/
     background-size: 200px 1200px;
   }
 }
