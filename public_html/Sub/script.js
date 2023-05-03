@@ -1,3 +1,65 @@
+// jQuery Plugins
+
+/*!
+jQuery Waypoints - v1.1.7
+Copyright (c) 2011-2012 Caleb Troughton
+Dual licensed under the MIT license and GPL license.
+https://github.com/imakewebthings/jquery-waypoints/blob/master/MIT-license.txt
+https://github.com/imakewebthings/jquery-waypoints/blob/master/GPL-license.txt
+*/
+
+/*
+Waypoints is a small jQuery plugin that makes it easy to execute a function
+whenever you scroll to an element.
+
+GitHub Repository: https://github.com/imakewebthings/jquery-waypoints
+Documentation and Examples: http://imakewebthings.github.com/jquery-waypoints
+
+Changelog:
+	v1.1.7
+		- Actually fix the post-load bug in Issue #28 from v1.1.3.
+	v1.1.6
+		- Fix potential memory leak by unbinding events on empty context elements.
+	v1.1.5
+		- Make plugin compatible with Browserify/RequireJS. (Thanks @cjroebuck)
+	v1.1.4
+		- Add handler option to give alternate binding method. (Issue #34)
+	v1.1.3
+		- Fix cases where waypoints are added post-load and should be triggered
+		  immediately. (Issue #28)
+	v1.1.2
+		- Fixed error thrown by waypoints with triggerOnce option that were
+		  triggered via resize refresh.
+	v1.1.1
+		- Fixed bug in initialization where all offsets were being calculated
+		  as if set to 0 initially, causing unwarranted triggers during the
+		  subsequent refresh.
+		- Added onlyOnScroll, an option for individual waypoints that disables
+		  triggers due to an offset refresh that crosses the current scroll
+		  point. (All credit to @knuton on this one.)
+	v1.1
+		- Moved the continuous option out of global settings and into the options
+		  object for individual waypoints.
+		- Added the context option, which allows for using waypoints within any
+		  scrollable element, not just the window.
+	v1.0.2
+		- Moved scroll and resize handler bindings out of load.  Should play nicer
+		  with async loaders like Head JS and LABjs.
+		- Fixed a 1px off error when using certain % offsets.
+		- Added unit tests.
+	v1.0.1
+		- Added $.waypoints('viewportHeight').
+		- Fixed iOS bug (using the new viewportHeight method).
+		- Added offset function alias: 'bottom-in-view'.
+	v1.0
+		- Initial release.
+	
+Support:
+	- jQuery versions 1.4.3+
+	- IE6+, FF3+, Chrome 6+, Safari 4+, Opera 11
+	- Other versions and browsers may work, these are just the ones I've looked at.
+*/
+
 (function($, wp, wps, window, undefined){
 	'$:nomunge';
 	
@@ -1194,9 +1256,15 @@ function animateMain() {
 
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
-	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 1000, 'easeOutBack',  function(){ animateContent(); });
-	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
-	//$('#coder-list').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
+	$('#img-main2').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
+	$('#snaps').css({'visibility':'visible', 'opacity':'1'});
+	$('#snaps-1').css({'visibility':'visible', 'top':'50px'}).stop().delay(300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
+	$('#snaps-2').css({'visibility':'visible', 'top':'50px'}).stop().delay(500).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
+	$('#snaps-3').css({'visibility':'visible', 'top':'50px'}).stop().delay(700).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
+	$('#snaps-4').css({'visibility':'visible', 'top':'50px'}).stop().delay(900).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
+	$('#snaps-5').css({'visibility':'visible', 'top':'50px'}).stop().delay(1100).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack');
+	$('#snaps-6').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack',  function(){ animateContent(); });
+
 };
 
 
@@ -1207,10 +1275,7 @@ function animatePage() {
 
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo', function(){ animateContent(); });
-	$('#snaps').css({'visibility':'visible', 'top':'50px'}).stop().delay(1300).animate({'opacity':'1', 'top':'0px'}, 200, 'easeOutBack',  function(){ animateContent(); });
-	$('#card').css({'visibility':'visible', 'left':'50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
-//	$('#coder-list').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
-};
+	$('#img-main2').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo', function(){ animateContent(); });
 };
 
 /* 
@@ -1223,9 +1288,7 @@ function animateContact() {
 
 	navi.stop().delay(2000).animate({'opacity':'1'}, 1000, 'easeOutQuad', function(){ 
 		
-		// if(pageWidth >= 1140){
-		// 	navi.imageLens({ imageSrc: "https://www.adhamdannaway.com/wp-content/themes/dannaway/images/adham-dannaway-sky-people.jpg" });
-		// }
+
 	});
 	
 };
@@ -1370,42 +1433,9 @@ function animateFeatured() {
 	   triggerOnce: true
 	});
 
-	//cards/*
-	$('#card').waypoint(function(event, direction) {
-		$('#card').css({'visibility':'visible', 'left': '50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
-	  }, {
-		offset: '80%',
-		triggerOnce: true
-	  });
-	  
-	  $('#scene.scene--card').waypoint(function(event, direction) {
-		$('#scene.scene--card').css({'visibility':'visible', 'left': '50%'}).stop().animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
-	  }, {
-		offset: '80%',
-		triggerOnce: true
-	  });
-	  
-	  // animate the card element when it enters the viewport
-$('.scene--card').waypoint(function() {
-	$(this.element).find('.card').css('visibility', 'visible').addClass('animated fadeInRight');
-  }, { offset: '50%' });
-  
-*/
 };
 
-//snaps tooltip
-
-$(document).ready(function() {
-	$(".snap").hover(function() {
-	  $(this).attr("title", ""); // remove the default tooltip
-	  $(this).find("img").css("opacity", "0.5"); // reduce opacity of the image
-	  $(this).find("::before").css("display", "inline-block"); // show the tooltip box
-	}, function() {
-	  $(this).find("img").css("opacity", "1"); // restore opacity of the image
-	  $(this).find("::before").css("display", "none"); // hide the tooltip box
-	});
-  });
-  
+/* 
 * Function to animate face
 */
 function animateFace() {
@@ -1483,7 +1513,6 @@ function animateFace() {
 	
 }; 
 
-//function for the slide in letters in part coder
 
 /* 
 * Function to detect IE
@@ -1522,33 +1551,7 @@ var ie = (function(){
  
 }());
 
-//card images
-const card = document.querySelector('.card');
-const cardImg = card.querySelector('.card__img--front');
 
-// Function to check if element is in viewport
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Function to animate the image
-function animateImage() {
-    if (isInViewport(card)) {
-        cardImg.style.transform = 'translateX(200px)';
-        cardImg.style.transition = 'transform 1s ease-in-out';
-        window.removeEventListener('scroll', animateImage);
-    }
-}
-
-/*pie chart*/
-
-  
 
 /* 
 * Function to print IE page
@@ -1570,7 +1573,7 @@ function ieMessage() {
 	page 	 += "</p>";
 	page 	 += "</div>";
 	page 	 += "<div class='col-7 last'>";
-	page 	 += "<img class='major' src='https://www.adhamdannaway.com/wp-content/themes/dannaway/images/about-adham-dannaway.jpg' alt='adham dannaway ui designer'>";
+	page 	 += "<img class='major' src='/public_html/Sub/imgs/face.jpg' alt='Diogo Fernandes'>";
 	page 	 += "</div>";
 	page 	 += "</div>";
 	page 	 += "</section>";
@@ -1580,3 +1583,5 @@ function ieMessage() {
 	$('.content').replaceWith(page);
 
 }
+
+
