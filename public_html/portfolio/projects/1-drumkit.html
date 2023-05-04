@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 
  <html lang="en">
@@ -98,7 +96,7 @@
 
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <title>About Diogo Fernandes | Web Designer &amp; Web Developer</title>
+    <title>Diogo Fernandes Portfolio| Web Designer &amp; Web Developer</title>
 
 	<link rel="stylesheet"  
 	href="/public_html/Sub/siteground.css" 
@@ -162,8 +160,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 					<ul id="nav"  >
-						<li class="about is the current_page_item"><a href="index.html" aria-current="page">about</a></li>
-                        <li class="some of the projects"><a href="/public_html/portfolio/portfolio.html">portfolio</a></li>
+						<li class="about"><a href="index.html" aria-current="page">about</a></li>
+                        <li class="portfolio is the current_page_item"><a href="/public_html/portfolio/portfolio.html">portfolio</a></li>
                         <li class="Repositories"><a href="certificates.html">certificates</a></li>
                         <li class="contacts"><a href="contact.html">contact</a></li>
  
@@ -187,536 +185,546 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</div>
 
 	</header>  
-<style>/*
-    .container {
-    position: fixed;
-    display: flex;
-    align-items: center;
-     justify-content: space-between;
-    top: 0;
-    left: 0;
-    right:0; 
-    background-color: #000000; 
-    padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-left: 0px;
-  }
-
-  header#top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #000000;
-  z-index: 9999; 
-}
-
-
-  .container {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-left: 25px; 
-  padding-right: 20px;
-  top: 0;
-    left: 0;
-    right:0;
-}
 
   
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 50px;
-    background-color: #000000;
-  }
-/*
-  ul.social {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
+	<div class="content portfolio clearfix">
+
+        
+		
+        <section class="main nopad-b"> 
+            <div class="row">
+              <div id="text-main" class="col-5 text-main" style="text-align: left;"> 
+                <h1>Drum Kit Game</h1> 
+                <p class="author">Diogo Fernandes <span class="date">March 2023</span></p>
+                <p>After nearly 1 year  studing web development I have done entertainment projects with logic-driven approach. Here’s one of my favorirites <a href="https://www.practical-ui.com/">UI design book</a>.</p>
+              </div>
+            </div>
+          </section>
+
+    <section class="main-wrapper">
+      <div class="key-map-wrapper">
+        <h2>Key Mapping</h2>
+        <ul class="key-map-list">
+          <li>
+            <kbd class="key-code">E</kbd>
+            <span class="key-sound">Crash</span>
+          </li>
+          <li>
+            <kbd class="key-code">R</kbd>
+            <span class="key-sound">Ride</span>
+          </li>
+          <li>
+            <kbd class="key-code">F</kbd>
+            <span class="key-sound">Floor tom</span>
+          </li>
+          <li>
+            <kbd class="key-code">G</kbd>
+            <span class="key-sound">Mid tom</span>
+          </li>
+          <li>
+            <kbd class="key-code">H</kbd>
+            <span class="key-sound">High tom</span>
+          </li>
+          <li>
+            <kbd class="key-code">V</kbd>
+            <kbd class="key-code">B</kbd>
+            <span class="key-sound">Kick</span>
+          </li>
+          <li>
+            <kbd class="key-code">J</kbd>
+            <span class="key-sound">Snare</span>
+          </li>
+          <li>
+            <kbd class="key-code">I</kbd>
+            <span class="key-sound">Hi-Hat Open</span>
+          </li>
+          <li>
+            <kbd class="key-code">K</kbd>
+            <span class="key-sound">Hi-Hat Closed</span>
+          </li>
+        </ul>
+      </div>
+      <h1 class="main-title">PLAY ME</h1>
+      <div class="drum-kit-wrapper">
+        <img id="crash-ride" class="crash-cymbal" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/img/crash.png" alt="Crash cymbal">
+        <img id="hihat-top" class="hihat-top-cymbal" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/img/hihat-top.png" alt="Hi Hat cymbal">
+        <div data-key="74" class="key snare">
+          <kbd>J</kbd>
+        </div>
+        <div data-key="66" class="key kick">
+          <kbd>B</kbd>
+        </div>
+        <div data-key="86" class="key kick2">
+          <kbd>V</kbd>
+        </div>
+        <div data-key="72" class="key tom-high">
+          <kbd>H</kbd>
+        </div>
+        <div data-key="71" class="key tom-mid">
+          <kbd>G</kbd>
+        </div>
+        <div data-key="70" class="key tom-low">
+          <kbd>F</kbd>
+        </div>
+        <div data-key="69" class="key crash">
+          <kbd>E</kbd>
+        </div>
+        <div data-key="82" class="key ride">
+          <kbd>R</kbd>
+        </div>
+        <div data-key="73" class="key hihat-open">
+          <kbd>I</kbd>
+        </div>
+        <div data-key="75" class="key hihat-close">
+          <kbd>K</kbd>
+        </div>
+        <img class="drum-kit" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/img/drum-kit.png" alt="Drum Kit" />
+      </div>
+    </section>
+ 
+  <audio data-key="74" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/snare.wav"></audio>
+  <audio data-key="66" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/kick.wav"></audio>
+  <audio data-key="86" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/kick.wav"></audio>
+  <audio data-key="72" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-high.wav"></audio>
+  <audio data-key="71" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-mid.wav"></audio>
+  <audio data-key="70" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-low.wav"></audio>
+  <audio data-key="69" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/crash.wav"></audio>
+  <audio data-key="82" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/ride.wav"></audio>
+  <audio data-key="73" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/hihat-open.wav"></audio>
+  <audio data-key="75" src="https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/hihat-close.wav"></audio>
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Handlee|Pacifico);
+/
+html,/*
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+}
+*/
+.main-wrapper {
+	margin: 30px auto 0;
+	width: 1080px;
+	text-align: center;
 }
 
-ul.social li {
-  list-style: none;
-  margin-right: 20px; /* Add some margin to the right of the social icons 
-} */
-</style>
-    
+.main-title {
+	font-family: 'Pacifico', cursive;
+	text-align: center;
+	font-size: 3.2em;
+	color: #cb2026;
+	text-shadow: 1px 1px 1px #5a0b0d;
+}
 
-	<div class="content about clearfix">
+.drum-kit-wrapper {
+	position: relative;
+	width: 600px;
+	margin: -100px auto 0;
+}
 
-		<section class="main">
-			<div class="row">
-				<div id="text-main" class="col-5 text-main">
-					<h1>about.</h1>
-					<p class="intro">I'm a aspirant Web Designer and Full Stack Web Developer</p>
-					<p class="description">Put some nice description talking about the skills that can be used for recruiters</p>
+.drum-kit {
+	width: 100%;
+	height: 520px;
+	position: relative;
+}
 
-				</div>
+.crash-cymbal {
+	position: absolute;
+	top: 114px;
+    left: 80px;
+    transform: rotate(-7.2deg) scale(1.5);
+    transition: all ease-in-out .042s;
+}
 
-		
-                
-                    				<div id="img-main" class="col-7 align-c">
-					<img class="major preload" src="/public_html/Sub/imgs/face.jpg" alt="Diogo Fernandes">
-				</div>
-			</div>
-		</section>
+.hihat-top-cymbal {
+	position: absolute;
+    top: 166px;
+    right: 71px;
+    transform: scale(1.35);
+    z-index: 0;
+    transition: all ease-in-out .042s;
+}
 
-			<section class="light nopad-b">
-				<div class="row alt">
-					<div class="col-5 text-middle">
-						<h2>Full Stack</h2>
-						<p>lorem lems. Learn these quick, practical and powerful guidelines.</p>
-						<p><a class="transition" >mouse over the image</a></p>
-					</div>
-                          <div class="scene scene--card" class="col-7 align-c"> 
-							<link rel="stylesheet" href="/public_html/Sub/siteground.css">
-                            <div id="card" class="card">
-                              <img class="card__img card__img--front" src="/public_html/Sub/imgs/fend.jpg">
-                              <img class="card__img card__img--back" src="/public_html/Sub/imgs/bend.jpg">
-                            </div>
-							<div class="tooltip">
-								WOW What a headache &#128565 
-							</br>
-						</br>
-								Thanks for visiting
-							  </div>
-                          </div>
-						  </div>
-						  
-		</section>
+.key {
+	display: inline-block;
+	transition: all ease-in-out .042s;
+	position: absolute;
+	background: #eaeaea;
+    font-size: 1.5em;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    border-radius: 4px;
+    border: 3px solid #aaa;
+    color: #444;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.65);
+    z-index: 2;
+}
 
+.key.kick {
+	top: 355px;
+    right: 250px;
+}
 
-	
-				<div class="row alt"></div>
-			
+.key.kick2 {
+    top: 355px;
+    right: 308px;
+}
 
-			<section class="main">
-				<div class="row">
+.key.snare {
+	right: 145px;
+    top: 280px;
+}
 
-					<div class="row alt">
-				
-					<h4>Software skills</h4>
-					</div>
-					</div>
+.key.tom-high {
+	right: 227px;
+    top: 240px;
+}
 
-			<div id="snaps" class="row align-c snaps clearfix">
-				
-				
-				<a id="snaps-6" tooltip="This is HTML" >
-					<img class="preload" src="/public_html/Sub/imgs/html.png" >	
-					
-				</a>
-				
+.key.tom-mid {
+	left: 222px;
+    top: 220px;
+}
 
-					<a id="snaps-5" tooltip="This is CSS" >
-						<img class="preload" src="/public_html/Sub/imgs/css.png"  >	
-						
-					</a>
+.key.tom-low {
+	top: 320px;
+    left: 133px;
+}
 
-					<a id="snaps-4"  tooltip="This is JAVASCRIPT" >
-						<img class="preload" src="/public_html/Sub/imgs/js.png" >					
-					</a>
+.key.crash {
+	top: 80px;
+    left: 75px;
+}
 
-					<a id="snaps-3" tooltip="This is C programming">
-						<img class="preload" src="/public_html/Sub/imgs/c.png" >					
-					</a>
+.key.ride {
+	left: 165px;
+    top: 87px;
+}
 
-					<a id="snaps-2"  tooltip="This is GIT" >
-						<img class="preload" src="/public_html/Sub/imgs/git.png" >					
-					</a>
+.key.hihat-open {
+	right: 165px;
+    top: 144px;
+}
 
-					<a id="snaps-7" tooltip="This is GIT HUB" >
-						<img class="preload" src="/public_html/Sub/imgs/github.png" >					
-					</a>
+.key.hihat-close {
+	right: 60px;
+    top: 150px;
+}
 
-					<a id="snaps-8" tooltip="This is REACT" >
-						<img class="preload" src="/public_html/Sub/imgs/ract.png">					
-					</a>
+.playing {
+	transform: scale(1.12);
+}
 
-					<a id="snaps-9" tooltip="This is NODE" >
-						<img class="preload" src="/public_html/Sub/imgs/node.png">					
-					</a>
+.key-map-wrapper {
+	position: absolute;
+    right: 0;
+    top: 0;
+    height: 700px;
+    background: #111;
+    width: 250px;
+    z-index: 3;
+}
 
-					<a id="snaps-26" tooltip="This is ANGULAR" >
-						<img class="preload" src="/public_html/Sub/imgs/angul.png" >
-					</a>
+.key-map-wrapper > h2 {
+	color: #fff;
+	font-family: 'Handlee', cursive;
+	margin-bottom: 35px;
+	border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
 
-					<a id="snaps-10" tooltip="PostgreSQL" >
-						<img class="preload" src="/public_html/Sub/imgs/sql.png" >					
-					</a>
+.key-map-list {
+	list-style: none;
+	color: #fff;
+	text-align: left;
+}
 
-					<a id="snaps-11" tooltip="This is LINUX " >
-						<img class="preload" src="/public_html/Sub/imgs/linux.png" >					
-					</a>
+.key-map-list > li {
+	margin-bottom: 25px;
+}
 
-					<a id="snaps-12"  tooltip="This is UBUNTU">
-						<img class="preload" src="/public_html/Sub/imgs/ubuntu-logo.png" >					
-					</a>
+.key-code {
+	color: #444;
+    background-color: #eaeaea;
+    font-size: 1.25em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 3px solid #aaa;
+}
 
-					<a id="snaps-13"  tooltip="This is PHP">
-						<img class="preload" src="/public_html/Sub/imgs/php.png" >					
-					</a>
+.key-sound {
+	font-size: 1.2em;
+	margin-left: 10px;
+	font-family: 'Handlee', cursive;
+	vertical-align: middle;
+}
+  </style>
 
-					<a id="snaps-14"  tooltip="This is jQuery">
-						<img class="preload" src="/public_html/Sub/imgs/jquery.png" >					
-					</a>
+  <script>
+    // JavaScript Drum Kit App
 
-					<a id="snaps-15" tooltip="This is VIM editor" >
-						<img class="preload" src="/public_html/Sub/imgs/vim.png" >					
-					</a>
+{
+	const playingClass = 'playing',
+		crashRide = document.getElementById('crash-ride'),
+		hiHatTop = document.getElementById('hihat-top');
 
-					<a id="snaps-16"  tooltip="VSCODE editor">
-						<img class="preload" src="/public_html/Sub/imgs/vscode.png" >					
-					</a>
+	const animateCrashOrRide = () => {
+		crashRide.style.transform = 'rotate(0deg) scale(1.5)';
+	};
 
-					<a id="snaps-17" tooltip="This is JIRA" >
-						<img class="preload" src="/public_html/Sub/imgs/jira.jpg" >					
-					</a>
+	const animateHiHatClosed = () => {
+		hiHatTop.style.top = '171px';
+	};
 
-					<a id="snaps-18" tooltip="This is FIGMA" >
-						<img class="preload" src="/public_html/Sub/imgs/figma.png" >					
-					</a>
+	const playSound = e => {
+		const keyCode = e.keyCode,
+			keyElement = document.querySelector(`div[data-key="${keyCode}"]`);
 
-					<a id="snaps-19" tooltip="This is ACROBAT" >
-						<img class="preload" src="/public_html/Sub/imgs/acrobat.png" >
-					</a>
-					
-					<a id="snaps-20" tooltip="This is PHOTOSHOP" >
-						<img class="preload" src="/public_html/Sub/imgs/ps.png" >					
-					</a>
+		if(!keyElement) return;
 
-					<a id="snaps-21"  tooltip="This is ILLUSTRATOR">
-						<img class="preload" src="/public_html/Sub/imgs/illustartor.png" >					
-					</a>
+		const audioElement = document.querySelector(`audio[data-key="${keyCode}"]`);
+		audioElement.currentTime = 0;
+		audioElement.play();
 
-					<a id="snaps-22" tooltip="This is INDESIGN" >
-						<img class="preload" src="/public_html/Sub/imgs/indesign.png" >					
-					</a>
+		switch(keyCode) {
+			case 69:
+			case 82:
+				animateCrashOrRide();
+				break;
+			case 75:
+				animateHiHatClosed();
+				break;
+		}
 
-					<a id="snaps-23" tooltip="POWERPOINT" >
-						<img class="preload" src="/public_html/Sub/imgs/power.png" >
-					</a>
+		keyElement.classList.add(playingClass);
+	};
 
-					<a id="snaps-24" tooltip="This is EXCEL" >
-						<img class="preload" src="/public_html/Sub/imgs/excel.png" >					
-					</a>
+	const removeCrashRideTransition = e => {
+		if(e.propertyName !== 'transform') return;
 
-					<a id="snaps-25" tooltip="This is WORD" >
-						<img class="preload" src="/public_html/Sub/imgs/word.png">					
-					</a>
+		e.target.style.transform = 'rotate(-7.2deg) scale(1.5)';
+	};
 
-				<a id="snaps-26" tooltip="This is HTML" >
-						<img class="preload" src="/public_html/Sub/imgs/angul.png">
-					</a>
-				
-                </div>
-			
-				</section>
-				
-	<!--
-		<section class="light nopad-b">
-			
-			<div class="row alt">
-				<div class="col-5 text-middle">
-					<h2>My book</h2>
-					<p>Over nearly 2 decades working as a product designer, I’ve found that you really only need a small handful of UI design guidelines to solve most interface design problems. Learn these quick, practical and powerful guidelines.</p>
-					<p><a class="transition" href="https://www.practical-ui.com/">Read the book</a></p>
-				</div>
-				<div id="img-3" class="col-7 align-c">
-					<a class="transition" href="https://www.practical-ui.com/"><img class="major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/ui-design-book-by-adham-dannaway.jpg" alt="Adham Dannaway's UI design book"></a>
-				</div>
-			</div>
-		</section>
-	</br>
+	const removeHiHatTopTransition = e => {
+		if(e.propertyName !== 'top') return;
 
-		<div id="content-detail">-->
+		e.target.style.top = '166px';
+	};	
 
-			<section class="dark">
-				<div class="row">
-					<div  class="col-12 pie-chart">
+	const removeKeyTransition = e => {
+		if(e.propertyName !== 'transform') return;
 
-						<div class="coder">
-							
-							<h2 id="part-coder-heading">Part Coder</h2>
-							<ul class="ul" id="coder-list slide-in">
-								<li li id="special-item">Websites</li>
-								<li li id="special-item">Apps</li>
-								<li li id="special-item">Programms</li>
-								<li li id="special-item">Tester</li>
-								<li li id="special-item">Cybersecurity</li>
-							</ul>
+		e.target.classList.remove(playingClass)
+	};
+
+	const drumKeys = Array.from(document.querySelectorAll('.key'));
+
+	drumKeys.forEach(key => {
+		key.addEventListener('transitionend', removeKeyTransition);
+	});
+
+	crashRide.addEventListener('transitionend', removeCrashRideTransition);
+	hiHatTop.addEventListener('transitionend', removeHiHatTopTransition);
+
+	window.addEventListener('keydown', playSound);
+}
+  </script>
+    <div id="img-main2" class="col-7 align-c">
+		<!--  <img class="major preload" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/adham-dannaway-design-portfolio.jpg" alt="adham dannaway design portfolio">-->
+	  </div>
+  </div>
+  </section>
+  <div id="content-detail"></div>
+<section class="dark">
+	<div class="row">
+		<div class="col-12">
+
+			<div class="header-center"><h3>More from my portfolio</h3></div>
+			<ul id="thumbs" class="thumbs clearfix">
+
+				<li>
+					<a href=https://www.adhamdannaway.com/portfolio/creating-a-lean-design-system>
+						<img src="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+						<div class='description'>
+							<span class='arrow-r'></span>
+							<h4>Creating a lean design system</h4>
+							<p>Design system</p>
 						</div>
-
-						<div class="designer">
-							<h2 id="part-designer-heading">Part Designer</h2>
-							<ul class="ul" id="designer-list slide-in">
-								<li id="special-item">Mock ups</li>
-								<li id="special-item">Ui/Ux Design</li>
-								<li id="special-item">Photo Editing</li>
-								<li id="special-item">Illustrations </li>
-								<li id="special-item">Color theory</li>
-							</ul>	
+					</a>
+				</li>
+				
+				<li>
+					<a href=https://www.adhamdannaway.com/portfolio/interior-design-news-feed>
+						<img src="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+						<div class='description'>
+							<span class='arrow-r'></span>
+							<h4>Interior design news feed</h4>
+							<p>Side project</p>
 						</div>
-
-					
-
-						
-
-						<img id="img-0" class="preload major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/pie-chart.png" alt="part UI designer, part Front End Developer">
-					<br>
-					<br>
-					<br>
-						<p id="special-message"></a>Please refresh this page to see some special effect</p>
+					</a>
+				</li>
 				
-					</div>
-				</div>
+				<li>
+					<a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
+						<img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+						<div class='description'>
+							<span class='arrow-r'></span>
+							<h4>Qantas map search</h4>
+							<p>Product design</p>
+						</div>
+					</a>
+				</li>	
 				
-			</section>
+				<li>
+					<a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
+						<img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+						<div class='description'>
+							<span class='arrow-r'></span>
+							<h4>Qantas map search</h4>
+							<p>Product design</p>
+						</div>
+					</a>
+				</li>	
+			 </ul>
+			</div>
+		</div>
+	</div>
 
-			<section class="light nopad-b">
-				<div class="row alt">
-					<div class="col-5 ten-things">
-						<h2> Best coding Skills</h2>
-						<!--ul class="ul">
-							<li id="background-word">Html</li>
-							<li id="background-word">CSS</li>
-							<li id="background-word">JavaScript</li>
-							<li id="background-word">JS React</li>
-							<li id="background-word">C</li>
-							<li id="background-word">Linux</li>
-							<li id="background-word">APIs</li>
-							<li id="background-word">Linux</li>
-						</ul>-->
-						<ul id="my-list" class="ul">
-							<li data-emoji="🎨">Html</li>
-							<li data-emoji="🎭">CSS</li>
-							<li data-emoji="🚀">JavaScript</li>
-							<li data-emoji="🌈">JS React</li>
-							<li data-emoji="👽">C</li>
-							<li data-emoji="🐧">Linux</li>
-							<li data-emoji="🌐">APIs</li>
-						  </ul>
-					</div>
-					<div id="img-1" class="col-7 align-c">
-						<img class="major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/yoda.jpg" alt="Yoda rocks">
-					</div>
-				</div>
-			</section>
+</div><!-- / content-detail -->
 
-			<section id="bar-chart" class="dark nopad-b">
-				<div class="row">
-					<div  class="col-12">
-
-						<h2 class="align-r">My skills</h2>
-						<ul class="bar-chart">
-							<li class="axis">
-								<div class="label">Jedi</div>
-								<div class="label">Ninja</div>
-								<div class="label">Geek</div>
-								<div class="label">Newbie</div>
-							</li><li id="aqua" class="aqua p-95">
-								<div class="percent">90<span>%</span></div>
-								<div class="skill">HTML/CSS</div>
-							</li><li id="pink" class="pink p-90">
-								<div class="percent">80<span>%</span></div>
-								<div class="skill">JavaScript</div>
-							</li><li id="yellow" class="yellow p-95">
-								<div class="percent">94<span>%</span></div>
-								<div class="skill">Sleeping</div>
-							</li><li id="brown" class="brown p-75">
-								<div class="percent">70<span>%</span></div>
-								<div class="skill">Chat GPT<br> Stack Overflow</div>
-							</li><li id="red" class="red p-40">
-								<div class="percent">42<span>%</span></div>
-								<div class="skill">Coffee Drinking</div>
-							</li></ul>
-					
-					</div>
-				</div>
-			</section>
-
-			<section class="light">
-				<div class="row">
-					<div class="col-5 text-middle">
-						<h2>Certificates</h2>
-						<p>I am a self taught web developer, with online courses from CodeCademy, Oddin Project, Solo Learn and W3schools. </p>
-						<p><a class="transition" href="/cert">View certificates</a></p>
-					</div>
-					<div id="img-2" class="col-7 align-c">
-						<a class="transition" href="/cert"><img class="major" src="https://a.ilovecoding.org/img/_blogs/productivity-1995786_1920.jpg" alt="certifications"></a>
-					</div>
-				</div>
-			</section>
-
-			<section class="light nopad-b">
-				<div class="row alt">
-					<div class="col-5 text-middle">
-						<h2>More About Me</h2>
-						<p>I have moved to Belgium since 2019 with my belgian girlfriend in order for her to study at the university. During the last year I have been studing and practicing web development, from the design passing by programming and polishing my knowladge in server side.I have a background in Design and photo editing and I am current in the begginng of my carrer as a web designer and programmer.</p>
-					</div>
-					<div id="img-3" class="col-7 align-c">
-						<a class="transition" href="https://www.practical-ui.com/"><img class="major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/ui-design-book-by-adham-dannaway.jpg" alt="Diogos"></a>
-					</div>
-				</div>
-			</section>
-
-			<section class="light">
-				<div class="row">
-					<div class="col-5 text-middle">
-						<h2>My Hobbies</h2>
-						<p>I love being connected with computers and technology, especialy taking photos and editing in Photoshop, Learning new coding languages, and in my free time I do travel and hike in remote zones.  </p>
-						<!--<p><a class="transition" href="https://www.adhamdannaway.com/blog/how-i-became-a-designer">Read my story</a></p>-->
-					</div>
-					<div id="img-4" class="col-7 align-c">
-						<a class="transition" href="https://res.cloudinary.com/whistler/image/upload/w_2000,c_scale,dpr_1.0,q_auto/v1/s3/images/header/hiking-header.jpg"><img class="major" src="https://res.cloudinary.com/whistler/image/upload/w_2000,c_scale,dpr_1.0,q_auto/v1/s3/images/header/hiking-header.jpg" alt="Photography"></a>
-					</div>
-				</div>
-			</section>
-
-		</div><!-- / content-detail -->
-
-	</div><!-- / content -->
-
+</div><!-- / content -->
+</section>
 
 <footer id="footer" role="contentinfo">
 
+	
 	<div class="row">
 
 		<div class="col-12">
 
-			<div class="left"><a class="transition" href="index.html">&copy; 2023 Diogo Fernandes</a></div>
-			
-			<nav id="nav-footer">
+	<div class="left"><a class="transition" href="index.html">&copy; 2023 Diogo Fernandes</a></div>
+	
+	<nav id="nav-footer">
 
-				<ul>
-<li class="page_item page-item-2 current_page_item"><a href="/public_html/index.html" aria-current="page">about</a></li>
-<li class="page_item page-item-7"><a href="/public_html/portfolio/portfolio.html">portfolio</a></li>
+		<ul>
+			<li class="page_item page-item-2 "><a href="/public_html/index.html" >about</a></li>
+<li class="page_item page-item-7 "><a href="portfolio/indexPortfolio.html">portfolio</a></li>
 <li class="page_item page-item-9"><a href="https://github.com/Diogolisbon">Git Hub</a></li>
 <li class="page_item page-item-11"><a href="contact.html">contact</a></li>
-				</ul>
+		</ul>
 
-			</nav>
+	</nav>
 
-		</div>
+</div>
 
-	</div>
+</div>
 
 	<div class="gradient-white">
-		<a class="top" href="#top">Back to top</a>
+	<a class="top" href="#top">Back to top</a>
 	</div>
 
 </footer>
-
-<script type='text/javascript' src='/public_html/Sub/optimizer.js' id='swv-js'></script>
-<script type='text/javascript' id='contact-form-7-js-extra'>
-/* <![CDATA[ */
-var wpcf7 = {"api":{"root":"https:\/\/...\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
-/* ]]> */
-</script>
-<script type='text/javascript' src='/public_html/Sub/optimizer2.js' id='contact-form-7-js'></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script> 
-<script src="/public_html/Sub/clipboard.js"></script>
-<script src="/public_html/Sub/script.js"></script>
-<script type="text/javascript">
-
-//If browser is IE8 or older we show IE specific page
-if(ie < 9){
-	ieMessage();
-}
-
-/*
-* Call functions when dom is ready
-*/
-$(document).ready(function() {
-
-	// Hide browser top bar in mobiles
-	$('body').scrollTop(1);
-
-	// Toggle Navigation for mobile devices
-	$('.icon-nav').on('click', function(){
-		$('header nav').slideToggle();
-		$(this).toggleClass('active');
-	});
-
-	// Function to scroll to top
-	$('a[href=#top]').click(function(){
-
-        $('html, body').animate({scrollTop:0}, 1000, 'easeInOutQuad');
-        return false;
-    });
-
-	// Function to fade in image sprites
-  	$('.sprite').fadeSprite();
-
-    //Function for thumbnail hover effect
-    $('.thumbs li').hoverThumb();
-
-	// Function to animate when leaving page
-	$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
-
-	// Animate the header on first
-    	
-	$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
-
-
-	// Copy email address to clipboard	
-	var clipboard = new ClipboardJS('#email');
-
-	clipboard.on('success', function(e) {
-	    $('#email-tooltip').attr("tooltip", "Yay! My email address has been copied to your clipboard ✅");
-	    $('#email-tooltip').addClass('success');
-
-	    // Reset
-	    $('#email-tooltip').mouseleave(function() {
-
-		    setTimeout( function(){
-				$('#email-tooltip').attr("tooltip", "Click to copy my email address to your clipboard 😀");
-		    	$('#email-tooltip').removeClass('success');
-			}, 300);
-		});
-
-	    e.clearSelection();
-	});
-
-	clipboard.on('error', function(e) {
-	    $('#email-tooltip').attr("tooltip", "Sorry, there was a technical glitch. Please try again.");
-	    $('#email-tooltip').toggleClass('fail');
-	});
-
-
-	// Preload the page with jPreLoader
-	$('body').jpreLoader({
-
-		showSplash: true
-
-	}, function() {	
-
-		//Show the page once images are loaded	
-					animateMain();
-			animateAbout();
-
 			
-	});
-
-});
-
-
-</script>
-
-
-<!-- Amazon OneTag -->
-<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=b678d37e-a438-49a0-8c04-1b28e372c8ec"></script>
-
-</body>
-</html> 
+			<script type='text/javascript' src='/public_html/Sub/optimizer.js' id='swv-js'></script>
+			<script type='text/javascript' id='contact-form-7-js-extra'>
+			/* <![CDATA[ */
+			var wpcf7 = {"api":{"root":"https:\/\/...\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+			/* ]]> */
+			</script>
+			<script type='text/javascript' src='/public_html/Sub/optimizer2.js' id='contact-form-7-js'></script>
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+			<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script> 
+			<script src="/public_html/Sub/clipboard.js"></script>
+			<script src="/public_html/Sub/script.js"></script>
+			<script type="text/javascript">
+			
+			//If browser is IE8 or older we show IE specific page
+			if(ie < 9){
+				ieMessage();
+			}
+			
+			/*
+			* Call functions when dom is ready
+			*/
+			$(document).ready(function() {
+			
+				// Hide browser top bar in mobiles
+				$('body').scrollTop(1);
+			
+				// Toggle Navigation for mobile devices
+				$('.icon-nav').on('click', function(){
+					$('header nav').slideToggle();
+					$(this).toggleClass('active');
+				});
+			
+				// Function to scroll to top
+				$('a[href=#top]').click(function(){
+			
+					$('html, body').animate({scrollTop:0}, 1000, 'easeInOutQuad');
+					return false;
+				});
+			
+				// Function to fade in image sprites
+				  $('.sprite').fadeSprite();
+			
+				//Function for thumbnail hover effect
+				$('.thumbs li').hoverThumb();
+			
+				// Function to animate when leaving page
+				$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
+			
+				// Animate the header on first
+					
+				$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
+			
+			
+				// Copy email address to clipboard	
+				var clipboard = new ClipboardJS('#email');
+			
+				clipboard.on('success', function(e) {
+					$('#email-tooltip').attr("tooltip", "Yay! My email address has been copied to your clipboard ✅");
+					$('#email-tooltip').addClass('success');
+			
+					// Reset
+					$('#email-tooltip').mouseleave(function() {
+			
+						setTimeout( function(){
+							$('#email-tooltip').attr("tooltip", "Click to copy my email address to your clipboard 😀");
+							$('#email-tooltip').removeClass('success');
+						}, 300);
+					});
+			
+					e.clearSelection();
+				});
+			
+				clipboard.on('error', function(e) {
+					$('#email-tooltip').attr("tooltip", "Sorry, there was a technical glitch. Please try again.");
+					$('#email-tooltip').toggleClass('fail');
+				});
+			
+			
+				// Preload the page with jPreLoader
+				$('body').jpreLoader({
+			
+					showSplash: true
+			
+				}, function() {	
+			
+					//Show the page once images are loaded	
+					$.when(animatePage()).then($('#thumbs li').animateGallery());
+			
+						
+				});
+			
+			});
+			
+			
+			</script>
+			
+			
+			<!-- Amazon OneTag -->
+			<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=b678d37e-a438-49a0-8c04-1b28e372c8ec"></script>
+			
+			</body>

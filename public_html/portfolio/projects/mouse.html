@@ -98,7 +98,7 @@
 
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <title>About Diogo Fernandes | Web Designer &amp; Web Developer</title>
+    <title>Diogo Fernandes Portfolio| Web Designer &amp; Web Developer</title>
 
 	<link rel="stylesheet"  
 	href="/public_html/Sub/siteground.css" 
@@ -162,8 +162,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 					<ul id="nav"  >
-						<li class="about is the current_page_item"><a href="index.html" aria-current="page">about</a></li>
-                        <li class="some of the projects"><a href="/public_html/portfolio/portfolio.html">portfolio</a></li>
+						<li class="about"><a href="index.html" aria-current="page">about</a></li>
+                        <li class="portfolio is the current_page_item"><a href="/public_html/portfolio/portfolio.html">portfolio</a></li>
                         <li class="Repositories"><a href="certificates.html">certificates</a></li>
                         <li class="contacts"><a href="contact.html">contact</a></li>
  
@@ -187,405 +187,148 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</div>
 
 	</header>  
-<style>/*
-    .container {
-    position: fixed;
-    display: flex;
-    align-items: center;
-     justify-content: space-between;
-    top: 0;
-    left: 0;
-    right:0; 
-    background-color: #000000; 
-    padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-left: 0px;
-  }
 
-  header#top {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #000000;
-  z-index: 9999; 
-}
-
-
-  .container {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-left: 25px; 
-  padding-right: 20px;
-  top: 0;
-    left: 0;
-    right:0;
-}
-
-  
-  .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 50px;
-    background-color: #000000;
-  }
-/*
-  ul.social {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-ul.social li {
-  list-style: none;
-  margin-right: 20px; /* Add some margin to the right of the social icons 
-} */
-</style>
-    
 
 	<div class="content about clearfix">
 
-		<section class="main">
+		<section class="main nopad-b">
 			<div class="row">
 				<div id="text-main" class="col-5 text-main">
-					<h1>about.</h1>
-					<p class="intro">I'm a aspirant Web Designer and Full Stack Web Developer</p>
-					<p class="description">Put some nice description talking about the skills that can be used for recruiters</p>
-
+                    <h1>Local Storage</h1> 
+                    <p class="author">Diogo Fernandes <span class="date">March 2023</span></p>
+                    <p class="description">This code creates a web page that displays a list of items with checkboxes that can be checked off as completed. The user can add new items to the list using a form at the bottom of the page. The list of items is stored in the browser's local storage, so it persists even if the user closes the browser or navigates away from the page. The code uses JavaScript to handle user interactions with the page, such as adding new items to the list and checking off completed items. <a href="https://www.practical-ui.com/">UI design book</a>.</p>
+                  </div>
 				</div>
+        </section>
 
+        <section class = "body2">
+            <div class="hero">
+                <h2 contenteditable>🔥WOAH!</h2>
+              </div>
+            
+              <style>
+              html {
+                color: black;
+                font-family: sans-serif;
+              }
+            
+              body {
+                margin: 0;
+              }
+            
+              .hero {
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: black;
+              }
+            
+              h2 {
+                text-shadow: 10px 10px 0 rgba(0,0,0,1);
+                font-size: 100px;
+              }
+              </style>
+            
+            <script>
+              const hero = document.querySelector('.hero');
+              const text = hero.querySelector('h2');
+              const walk = 500; // 500px
+            
+              function shadow(e) {
+                const { offsetWidth: width, offsetHeight: height } = hero;
+                let { offsetX: x, offsetY: y } = e;
+            
+                if (this !== e.target) {
+                  x = x + e.target.offsetLeft;
+                  y = y + e.target.offsetTop;
+                }
+            
+                const xWalk = Math.round((x / width * walk) - (walk / 2));
+                const yWalk = Math.round((y / height * walk) - (walk / 2));
+            
+                text.style.textShadow = `
+                  ${xWalk}px ${yWalk}px 0 rgba(255,0,255,0.7),
+                  ${xWalk * -1}px ${yWalk}px 0 rgba(0,255,255,0.7),
+                  ${yWalk}px ${xWalk * -1}px 0 rgba(0,255,0,0.7),
+                  ${yWalk * -1}px ${xWalk}px 0 rgba(0,0,255,0.7)
+                `;
+            
+              }
+            
+              hero.addEventListener('mousemove', shadow);
+            </script>
+            
 		
-                
-                    				<div id="img-main" class="col-7 align-c">
-					<img class="major preload" src="/public_html/Sub/imgs/face.jpg" alt="Diogo Fernandes">
-				</div>
-			</div>
-		</section>
+            <div id="img-main" class="col-7 align-c">
+              <!--  <img class="major preload" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/adham-dannaway-design-portfolio.jpg" alt="adham dannaway design portfolio">-->
+            </div>
+        </div>
+    </section>
 
-			<section class="light nopad-b">
-				<div class="row alt">
-					<div class="col-5 text-middle">
-						<h2>Full Stack</h2>
-						<p>lorem lems. Learn these quick, practical and powerful guidelines.</p>
-						<p><a class="transition" >mouse over the image</a></p>
-					</div>
-                          <div class="scene scene--card" class="col-7 align-c"> 
-							<link rel="stylesheet" href="/public_html/Sub/siteground.css">
-                            <div id="card" class="card">
-                              <img class="card__img card__img--front" src="/public_html/Sub/imgs/fend.jpg">
-                              <img class="card__img card__img--back" src="/public_html/Sub/imgs/bend.jpg">
-                            </div>
-							<div class="tooltip">
-								WOW What a headache &#128565 
-							</br>
-						</br>
-								Thanks for visiting
-							  </div>
-                          </div>
-						  </div>
-						  
-		</section>
+    <div id="content-detail">
 
+        <section class="dark">
+            <div class="row">
+                <div class="col-12">
 
-	
-				<div class="row alt"></div>
-			
+                    <div class="header-center"><h3>More from my portfolio</h3></div>
 
-			<section class="main">
-				<div class="row">
+                    <ul id="thumbs" class="thumbs clearfix">
+                        <li>
+                            <a href=https://www.adhamdannaway.com/portfolio/creating-a-lean-design-system>
+                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+                                <div class='description'>
+                                    <span class='arrow-r'></span>
+                                    <h4>Creating a lean design system</h4>
+                                    <p>Design system</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href=https://www.adhamdannaway.com/portfolio/interior-design-news-feed>
+                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+                                <div class='description'>
+                                    <span class='arrow-r'></span>
+                                    <h4>Interior design news feed</h4>
+                                    <p>Side project</p>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
+                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+                                <div class='description'>
+                                    <span class='arrow-r'></span>
+                                    <h4>Qantas map search</h4>
+                                    <p>Product design</p>
+                                </div>
+                            </a>
+                        </li>		
+                        
+                        <li>
+                            <a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
+                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+                                <div class='description'>
+                                    <span class='arrow-r'></span>
+                                    <h4>Qantas map search</h4>
+                                    <p>Product design</p>
+                                </div>
+                            </a>
+                        </li>		
+                                                      
+                     </ul>
 
-					<div class="row alt">
-				
-					<h4>Software skills</h4>
-					</div>
-					</div>
-
-			<div id="snaps" class="row align-c snaps clearfix">
-				
-				
-				<a id="snaps-6" tooltip="This is HTML" >
-					<img class="preload" src="/public_html/Sub/imgs/html.png" >	
-					
-				</a>
-				
-
-					<a id="snaps-5" tooltip="This is CSS" >
-						<img class="preload" src="/public_html/Sub/imgs/css.png"  >	
-						
-					</a>
-
-					<a id="snaps-4"  tooltip="This is JAVASCRIPT" >
-						<img class="preload" src="/public_html/Sub/imgs/js.png" >					
-					</a>
-
-					<a id="snaps-3" tooltip="This is C programming">
-						<img class="preload" src="/public_html/Sub/imgs/c.png" >					
-					</a>
-
-					<a id="snaps-2"  tooltip="This is GIT" >
-						<img class="preload" src="/public_html/Sub/imgs/git.png" >					
-					</a>
-
-					<a id="snaps-7" tooltip="This is GIT HUB" >
-						<img class="preload" src="/public_html/Sub/imgs/github.png" >					
-					</a>
-
-					<a id="snaps-8" tooltip="This is REACT" >
-						<img class="preload" src="/public_html/Sub/imgs/ract.png">					
-					</a>
-
-					<a id="snaps-9" tooltip="This is NODE" >
-						<img class="preload" src="/public_html/Sub/imgs/node.png">					
-					</a>
-
-					<a id="snaps-26" tooltip="This is ANGULAR" >
-						<img class="preload" src="/public_html/Sub/imgs/angul.png" >
-					</a>
-
-					<a id="snaps-10" tooltip="PostgreSQL" >
-						<img class="preload" src="/public_html/Sub/imgs/sql.png" >					
-					</a>
-
-					<a id="snaps-11" tooltip="This is LINUX " >
-						<img class="preload" src="/public_html/Sub/imgs/linux.png" >					
-					</a>
-
-					<a id="snaps-12"  tooltip="This is UBUNTU">
-						<img class="preload" src="/public_html/Sub/imgs/ubuntu-logo.png" >					
-					</a>
-
-					<a id="snaps-13"  tooltip="This is PHP">
-						<img class="preload" src="/public_html/Sub/imgs/php.png" >					
-					</a>
-
-					<a id="snaps-14"  tooltip="This is jQuery">
-						<img class="preload" src="/public_html/Sub/imgs/jquery.png" >					
-					</a>
-
-					<a id="snaps-15" tooltip="This is VIM editor" >
-						<img class="preload" src="/public_html/Sub/imgs/vim.png" >					
-					</a>
-
-					<a id="snaps-16"  tooltip="VSCODE editor">
-						<img class="preload" src="/public_html/Sub/imgs/vscode.png" >					
-					</a>
-
-					<a id="snaps-17" tooltip="This is JIRA" >
-						<img class="preload" src="/public_html/Sub/imgs/jira.jpg" >					
-					</a>
-
-					<a id="snaps-18" tooltip="This is FIGMA" >
-						<img class="preload" src="/public_html/Sub/imgs/figma.png" >					
-					</a>
-
-					<a id="snaps-19" tooltip="This is ACROBAT" >
-						<img class="preload" src="/public_html/Sub/imgs/acrobat.png" >
-					</a>
-					
-					<a id="snaps-20" tooltip="This is PHOTOSHOP" >
-						<img class="preload" src="/public_html/Sub/imgs/ps.png" >					
-					</a>
-
-					<a id="snaps-21"  tooltip="This is ILLUSTRATOR">
-						<img class="preload" src="/public_html/Sub/imgs/illustartor.png" >					
-					</a>
-
-					<a id="snaps-22" tooltip="This is INDESIGN" >
-						<img class="preload" src="/public_html/Sub/imgs/indesign.png" >					
-					</a>
-
-					<a id="snaps-23" tooltip="POWERPOINT" >
-						<img class="preload" src="/public_html/Sub/imgs/power.png" >
-					</a>
-
-					<a id="snaps-24" tooltip="This is EXCEL" >
-						<img class="preload" src="/public_html/Sub/imgs/excel.png" >					
-					</a>
-
-					<a id="snaps-25" tooltip="This is WORD" >
-						<img class="preload" src="/public_html/Sub/imgs/word.png">					
-					</a>
-
-				<a id="snaps-26" tooltip="This is HTML" >
-						<img class="preload" src="/public_html/Sub/imgs/angul.png">
-					</a>
-				
                 </div>
-			
-				</section>
-				
-	<!--
-		<section class="light nopad-b">
-			
-			<div class="row alt">
-				<div class="col-5 text-middle">
-					<h2>My book</h2>
-					<p>Over nearly 2 decades working as a product designer, I’ve found that you really only need a small handful of UI design guidelines to solve most interface design problems. Learn these quick, practical and powerful guidelines.</p>
-					<p><a class="transition" href="https://www.practical-ui.com/">Read the book</a></p>
-				</div>
-				<div id="img-3" class="col-7 align-c">
-					<a class="transition" href="https://www.practical-ui.com/"><img class="major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/ui-design-book-by-adham-dannaway.jpg" alt="Adham Dannaway's UI design book"></a>
-				</div>
-			</div>
-		</section>
-	</br>
+            </div>
+        </div>
 
-		<div id="content-detail">-->
+    </section>
+</div><!-- / content-detail -->
 
-			<section class="dark">
-				<div class="row">
-					<div  class="col-12 pie-chart">
-
-						<div class="coder">
-							
-							<h2 id="part-coder-heading">Part Coder</h2>
-							<ul class="ul" id="coder-list slide-in">
-								<li li id="special-item">Websites</li>
-								<li li id="special-item">Apps</li>
-								<li li id="special-item">Programms</li>
-								<li li id="special-item">Tester</li>
-								<li li id="special-item">Cybersecurity</li>
-							</ul>
-						</div>
-
-						<div class="designer">
-							<h2 id="part-designer-heading">Part Designer</h2>
-							<ul class="ul" id="designer-list slide-in">
-								<li id="special-item">Mock ups</li>
-								<li id="special-item">Ui/Ux Design</li>
-								<li id="special-item">Photo Editing</li>
-								<li id="special-item">Illustrations </li>
-								<li id="special-item">Color theory</li>
-							</ul>	
-						</div>
-
-					
-
-						
-
-						<img id="img-0" class="preload major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/pie-chart.png" alt="part UI designer, part Front End Developer">
-					<br>
-					<br>
-					<br>
-						<p id="special-message"></a>Please refresh this page to see some special effect</p>
-				
-					</div>
-				</div>
-				
-			</section>
-
-			<section class="light nopad-b">
-				<div class="row alt">
-					<div class="col-5 ten-things">
-						<h2> Best coding Skills</h2>
-						<!--ul class="ul">
-							<li id="background-word">Html</li>
-							<li id="background-word">CSS</li>
-							<li id="background-word">JavaScript</li>
-							<li id="background-word">JS React</li>
-							<li id="background-word">C</li>
-							<li id="background-word">Linux</li>
-							<li id="background-word">APIs</li>
-							<li id="background-word">Linux</li>
-						</ul>-->
-						<ul id="my-list" class="ul">
-							<li data-emoji="🎨">Html</li>
-							<li data-emoji="🎭">CSS</li>
-							<li data-emoji="🚀">JavaScript</li>
-							<li data-emoji="🌈">JS React</li>
-							<li data-emoji="👽">C</li>
-							<li data-emoji="🐧">Linux</li>
-							<li data-emoji="🌐">APIs</li>
-						  </ul>
-					</div>
-					<div id="img-1" class="col-7 align-c">
-						<img class="major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/yoda.jpg" alt="Yoda rocks">
-					</div>
-				</div>
-			</section>
-
-			<section id="bar-chart" class="dark nopad-b">
-				<div class="row">
-					<div  class="col-12">
-
-						<h2 class="align-r">My skills</h2>
-						<ul class="bar-chart">
-							<li class="axis">
-								<div class="label">Jedi</div>
-								<div class="label">Ninja</div>
-								<div class="label">Geek</div>
-								<div class="label">Newbie</div>
-							</li><li id="aqua" class="aqua p-95">
-								<div class="percent">90<span>%</span></div>
-								<div class="skill">HTML/CSS</div>
-							</li><li id="pink" class="pink p-90">
-								<div class="percent">80<span>%</span></div>
-								<div class="skill">JavaScript</div>
-							</li><li id="yellow" class="yellow p-95">
-								<div class="percent">94<span>%</span></div>
-								<div class="skill">Sleeping</div>
-							</li><li id="brown" class="brown p-75">
-								<div class="percent">70<span>%</span></div>
-								<div class="skill">Chat GPT<br> Stack Overflow</div>
-							</li><li id="red" class="red p-40">
-								<div class="percent">42<span>%</span></div>
-								<div class="skill">Coffee Drinking</div>
-							</li></ul>
-					
-					</div>
-				</div>
-			</section>
-
-			<section class="light">
-				<div class="row">
-					<div class="col-5 text-middle">
-						<h2>Certificates</h2>
-						<p>I am a self taught web developer, with online courses from CodeCademy, Oddin Project, Solo Learn and W3schools. </p>
-						<p><a class="transition" href="/cert">View certificates</a></p>
-					</div>
-					<div id="img-2" class="col-7 align-c">
-						<a class="transition" href="/cert"><img class="major" src="https://a.ilovecoding.org/img/_blogs/productivity-1995786_1920.jpg" alt="certifications"></a>
-					</div>
-				</div>
-			</section>
-
-			<section class="light nopad-b">
-				<div class="row alt">
-					<div class="col-5 text-middle">
-						<h2>More About Me</h2>
-						<p>I have moved to Belgium since 2019 with my belgian girlfriend in order for her to study at the university. During the last year I have been studing and practicing web development, from the design passing by programming and polishing my knowladge in server side.I have a background in Design and photo editing and I am current in the begginng of my carrer as a web designer and programmer.</p>
-					</div>
-					<div id="img-3" class="col-7 align-c">
-						<a class="transition" href="https://www.practical-ui.com/"><img class="major" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/ui-design-book-by-adham-dannaway.jpg" alt="Diogos"></a>
-					</div>
-				</div>
-			</section>
-
-			<section class="light">
-				<div class="row">
-					<div class="col-5 text-middle">
-						<h2>My Hobbies</h2>
-						<p>I love being connected with computers and technology, especialy taking photos and editing in Photoshop, Learning new coding languages, and in my free time I do travel and hike in remote zones.  </p>
-						<!--<p><a class="transition" href="https://www.adhamdannaway.com/blog/how-i-became-a-designer">Read my story</a></p>-->
-					</div>
-					<div id="img-4" class="col-7 align-c">
-						<a class="transition" href="https://res.cloudinary.com/whistler/image/upload/w_2000,c_scale,dpr_1.0,q_auto/v1/s3/images/header/hiking-header.jpg"><img class="major" src="https://res.cloudinary.com/whistler/image/upload/w_2000,c_scale,dpr_1.0,q_auto/v1/s3/images/header/hiking-header.jpg" alt="Photography"></a>
-					</div>
-				</div>
-			</section>
-
-		</div><!-- / content-detail -->
-
-	</div><!-- / content -->
-
+</div><!-- / content -->
 
 <footer id="footer" role="contentinfo">
 
@@ -598,8 +341,8 @@ ul.social li {
 			<nav id="nav-footer">
 
 				<ul>
-<li class="page_item page-item-2 current_page_item"><a href="/public_html/index.html" aria-current="page">about</a></li>
-<li class="page_item page-item-7"><a href="/public_html/portfolio/portfolio.html">portfolio</a></li>
+					<li class="page_item page-item-2 "><a href="/public_html/index.html" >about</a></li>
+<li class="page_item page-item-7 current_page_item"><a href="portfolio/indexPortfolio.html" aria-current="page">portfolio</a></li>
 <li class="page_item page-item-9"><a href="https://github.com/Diogolisbon">Git Hub</a></li>
 <li class="page_item page-item-11"><a href="contact.html">contact</a></li>
 				</ul>
@@ -703,8 +446,7 @@ $(document).ready(function() {
 	}, function() {	
 
 		//Show the page once images are loaded	
-					animateMain();
-			animateAbout();
+        $.when(animatePage()).then($('#thumbs li').animateGallery());
 
 			
 	});
