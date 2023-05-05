@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 
  <html lang="en">
@@ -187,177 +185,254 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		</div>
 
 	</header>  
+  
+	<div class="content portfolio clearfix">
 
-
-	<div class="content about clearfix">
-
-		<section class="main nopad-b">
-			<div class="row">
-				<div id="text-main" class="col-5 text-main">
-                    <h1>Local Storage</h1> 
-                    <p class="author">Diogo Fernandes <span class="date">March 2023</span></p>
-                    <p class="description">This code creates a web page that displays a list of items with checkboxes that can be checked off as completed. The user can add new items to the list using a form at the bottom of the page. The list of items is stored in the browser's local storage, so it persists even if the user closes the browser or navigates away from the page. The code uses JavaScript to handle user interactions with the page, such as adding new items to the list and checking off completed items. <a href="https://www.practical-ui.com/">UI design book</a>.</p>
-                  </div>
-				</div>
+        <section class="main nopad-b"> 
+            <div class="row">
+              <div id="text-main" class="col-5 text-main"> 
+                <h1>Rock Paper Scissors</h1> 
+                <p class="author">Diogo Fernandes <span class="date">March 2023</span></p>
+                <p class="description">let’s play a online version of Rock-Paper-Scissors where you can play against the HTTP server. <br> Using the http module, we will build a simple HTTP server. We will practice how to route requests based on pathname and request methods. We will also be using other core Node.js components in this project—we will use the fs module to stream HTML files and create an URL object to extract queries from a URL. <a href="https://www.practical-ui.com/">UI design book</a>.</p>
+              </div>
+            </div>
         </section>
 
         <section class = "body2">
-            <div class="hero">
-                <h2 contenteditable>🔥WOAH!</h2>
-              </div>
-            
-              <style>
-              html {
-                color: black;
-                font-family: sans-serif;
-              }
-            
-              body {
-                margin: 0;
-              }
-            
-              .hero {
-                min-height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: black;
-              }
-            
-              h2 {
-                text-shadow: 10px 10px 0 rgba(0,0,0,1);
-                font-size: 100px;
-              }
-              </style>
-            
-            <script>
-              const hero = document.querySelector('.hero');
-              const text = hero.querySelector('h2');
-              const walk = 500; // 500px
-            
-              function shadow(e) {
-                const { offsetWidth: width, offsetHeight: height } = hero;
-                let { offsetX: x, offsetY: y } = e;
-            
-                if (this !== e.target) {
-                  x = x + e.target.offsetLeft;
-                  y = y + e.target.offsetTop;
-                }
-            
-                const xWalk = Math.round((x / width * walk) - (walk / 2));
-                const yWalk = Math.round((y / height * walk) - (walk / 2));
-            
-                text.style.textShadow = `
-                  ${xWalk}px ${yWalk}px 0 rgba(255,0,255,0.7),
-                  ${xWalk * -1}px ${yWalk}px 0 rgba(0,255,255,0.7),
-                  ${yWalk}px ${xWalk * -1}px 0 rgba(0,255,0,0.7),
-                  ${yWalk * -1}px ${xWalk}px 0 rgba(0,0,255,0.7)
-                `;
-            
-              }
-            
-              hero.addEventListener('mousemove', shadow);
-            </script>
-            
-		
-            <div id="img-main" class="col-7 align-c">
-              <!--  <img class="major preload" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/adham-dannaway-design-portfolio.jpg" alt="adham dannaway design portfolio">-->
-            </div>
-        </div>
-    </section>
-
-    <div id="content-detail">
-
-        <section class="dark">
-            <div class="row">
-                <div class="col-12">
-
-                    <div class="header-center"><h3>More from my portfolio</h3></div>
-
-                    <ul id="thumbs" class="thumbs clearfix">
-                        <li>
-                            <a href=https://www.adhamdannaway.com/portfolio/creating-a-lean-design-system>
-                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
-                                <div class='description'>
-                                    <span class='arrow-r'></span>
-                                    <h4>Creating a lean design system</h4>
-                                    <p>Design system</p>
-                                </div>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href=https://www.adhamdannaway.com/portfolio/interior-design-news-feed>
-                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
-                                <div class='description'>
-                                    <span class='arrow-r'></span>
-                                    <h4>Interior design news feed</h4>
-                                    <p>Side project</p>
-                                </div>
-                            </a>
-                        </li>
-                        
-                        <li>
-                            <a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
-                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
-                                <div class='description'>
-                                    <span class='arrow-r'></span>
-                                    <h4>Qantas map search</h4>
-                                    <p>Product design</p>
-                                </div>
-                            </a>
-                        </li>		
-                        
-                        <li>
-                            <a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
-                                <img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
-                                <div class='description'>
-                                    <span class='arrow-r'></span>
-                                    <h4>Qantas map search</h4>
-                                    <p>Product design</p>
-                                </div>
-                            </a>
-                        </li>		
-                                                      
-                     </ul>
-
+            <div class="inbox">
+                <div class="item">
+                  <input type="checkbox">
+                  <p>This is an inbox layout.</p>
                 </div>
-            </div>
-        </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Check one item</p>
+                </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Hold down your Shift key</p>
+                </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Check a lower item</p>
+                </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Everything in between should also be set to checked</p>
+                </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Try do it without any libraries</p>
+                </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Just regular JavaScript</p>
+                </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Good Luck!</p>
+                </div>
+                <div class="item">
+                  <input type="checkbox">
+                  <p>Don't forget to tweet your result!</p>
+                </div>
+              </div>
 
-    </section>
+        <style>
+
+            .body2 {
+              font-family: sans-serif;
+              background: #ffc600;
+			  
+            }
+        
+            .inbox {
+			
+              max-width: 400px;
+              margin: 50px auto;
+              background: white;
+              border-radius: 5px;
+              box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+            }
+        
+            .item {
+				
+              display: flex;
+              align-items: center;
+              border-bottom: 1px solid #F1F1F1;
+            }
+        
+            .item:last-child {
+              border-bottom: 0;
+            }
+        
+        
+            input:checked + p {
+				
+              background: #F9F9F9;
+              text-decoration: line-through;
+            }
+        
+            input[type="checkbox"] {
+				
+              margin: 20px;
+            }
+        
+            p{
+              margin: 0;
+              padding: 20px;
+              transition: background 0.2s;
+              flex: 1;
+             /* font-family: 'helvetica neue';*/
+              font-size: 20px;
+              font-weight: 200;
+           
+            }
+          </style>
+           <!--
+           The following is a common layout you would see in an email client.
+        
+           When a user clicks a checkbox, holds Shift, and then clicks another checkbox a few rows down, all the checkboxes in-between those two checkboxes should be checked.
+        
+          -->
+         
+        
+        <script>
+        const checkboxes = document.querySelectorAll('.inbox input[type="checkbox"]');
+        
+        let lastChecked;
+        
+        function handleCheck(e) {
+          // Check if they had the shift key down
+          // AND check that they are checking it
+          let inBetween = false;
+          if (e.shiftKey && this.checked) {
+            // go ahead and do what we please
+            // loop over every single checkbox
+            checkboxes.forEach(checkbox => {
+              console.log(checkbox);
+              if (checkbox === this || checkbox === lastChecked) {
+                inBetween = !inBetween;
+                console.log('Starting to check them in between!');
+              }
+        
+              if (inBetween) {
+                checkbox.checked = true;
+              }
+            });
+          }
+        
+          lastChecked = this;
+        }
+        
+        checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck));
+        </script>
+		</section>
+
+		<div id="img-main" class="col-7 align-c">
+			<!--  <img class="major preload" src="https://www.adhamdannaway.com/wp-content/themes/dannaway/images/adham-dannaway-design-portfolio.jpg" alt="adham dannaway design portfolio">-->
+		  </div>
+	  </div>
+
+
+  <div id="content-detail">
+
+	
+	<section class="dark">
+		<div class="row">
+			<div class="col-12">
+
+				<div class="header-center"><h3>More from my portfolio</h3></div>
+
+				<ul id="thumbs" class="thumbs clearfix">
+					<li>
+						<a href=https://www.adhamdannaway.com/portfolio/creating-a-lean-design-system>
+							<img src="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2020/08/feature-william-hill-design-system-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+							<div class='description'>
+								<span class='arrow-r'></span>
+								<h4>Creating a lean design system</h4>
+								<p>Design system</p>
+							</div>
+						</a>
+					</li>
+					
+					<li>
+						<a href=https://www.adhamdannaway.com/portfolio/interior-design-news-feed>
+							<img src="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2019/04/feature-interior-design-news-feed-2-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+							<div class='description'>
+								<span class='arrow-r'></span>
+								<h4>Interior design news feed</h4>
+								<p>Side project</p>
+							</div>
+						</a>
+					</li>
+					
+					<li>
+						<a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
+							<img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+							<div class='description'>
+								<span class='arrow-r'></span>
+								<h4>Qantas map search</h4>
+								<p>Product design</p>
+							</div>
+						</a>
+					</li>		
+
+					<li>
+						<a href=https://www.adhamdannaway.com/portfolio/qantas-map-search>
+							<img src="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search.jpg 628w, https://www.adhamdannaway.com/wp-content/uploads/2018/07/feature-qantas-map-search-300x176.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" />
+							<div class='description'>
+								<span class='arrow-r'></span>
+								<h4>Qantas map search</h4>
+								<p>Product design</p>
+							</div>
+						</a>
+					</li>	
+					
+												  
+				</ul>
+
+			</div>
+		</div>
+	
+
+</section>
 </div><!-- / content-detail -->
 
 </div><!-- / content -->
 
+
+
 <footer id="footer" role="contentinfo">
 
-	<div class="row">
+<div class="row">
 
-		<div class="col-12">
+	<div class="col-12">
 
-			<div class="left"><a class="transition" href="index.html">&copy; 2023 Diogo Fernandes</a></div>
-			
-			<nav id="nav-footer">
+		<div class="left"><a class="transition" href="index.html">&copy; 2023 Diogo Fernandes</a></div>
+		
+		<nav id="nav-footer">
 
-				<ul>
-					<li class="page_item page-item-2 "><a href="/public_html/index.html" >about</a></li>
+			<ul>
+				<li class="page_item page-item-2 "><a href="/public_html/index.html" >about</a></li>
 <li class="page_item page-item-7 current_page_item"><a href="portfolio/indexPortfolio.html" aria-current="page">portfolio</a></li>
 <li class="page_item page-item-9"><a href="https://github.com/Diogolisbon">Git Hub</a></li>
 <li class="page_item page-item-11"><a href="contact.html">contact</a></li>
-				</ul>
+			</ul>
 
-			</nav>
-
-		</div>
+		</nav>
 
 	</div>
 
-	<div class="gradient-white">
-		<a class="top" href="#top">Back to top</a>
-	</div>
+</div>
+
+<div class="gradient-white">
+	<a class="top" href="#top">Back to top</a>
+</div>
 
 </footer>
+
+
 
 <script type='text/javascript' src='/public_html/Sub/optimizer.js' id='swv-js'></script>
 <script type='text/javascript' id='contact-form-7-js-extra'>
@@ -375,7 +450,7 @@ var wpcf7 = {"api":{"root":"https:\/\/...\/wp-json\/","namespace":"contact-form-
 
 //If browser is IE8 or older we show IE specific page
 if(ie < 9){
-	ieMessage();
+ieMessage();
 }
 
 /*
@@ -383,73 +458,73 @@ if(ie < 9){
 */
 $(document).ready(function() {
 
-	// Hide browser top bar in mobiles
-	$('body').scrollTop(1);
+// Hide browser top bar in mobiles
+$('body').scrollTop(1);
 
-	// Toggle Navigation for mobile devices
-	$('.icon-nav').on('click', function(){
-		$('header nav').slideToggle();
-		$(this).toggleClass('active');
+// Toggle Navigation for mobile devices
+$('.icon-nav').on('click', function(){
+	$('header nav').slideToggle();
+	$(this).toggleClass('active');
+});
+
+// Function to scroll to top
+$('a[href=#top]').click(function(){
+
+	$('html, body').animate({scrollTop:0}, 1000, 'easeInOutQuad');
+	return false;
+});
+
+// Function to fade in image sprites
+  $('.sprite').fadeSprite();
+
+//Function for thumbnail hover effect
+$('.thumbs li').hoverThumb();
+
+// Function to animate when leaving page
+$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
+
+// Animate the header on first
+	
+$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
+
+
+// Copy email address to clipboard	
+var clipboard = new ClipboardJS('#email');
+
+clipboard.on('success', function(e) {
+	$('#email-tooltip').attr("tooltip", "Yay! My email address has been copied to your clipboard ✅");
+	$('#email-tooltip').addClass('success');
+
+	// Reset
+	$('#email-tooltip').mouseleave(function() {
+
+		setTimeout( function(){
+			$('#email-tooltip').attr("tooltip", "Click to copy my email address to your clipboard 😀");
+			$('#email-tooltip').removeClass('success');
+		}, 300);
 	});
 
-	// Function to scroll to top
-	$('a[href=#top]').click(function(){
+	e.clearSelection();
+});
 
-        $('html, body').animate({scrollTop:0}, 1000, 'easeInOutQuad');
-        return false;
-    });
-
-	// Function to fade in image sprites
-  	$('.sprite').fadeSprite();
-
-    //Function for thumbnail hover effect
-    $('.thumbs li').hoverThumb();
-
-	// Function to animate when leaving page
-	$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
-
-	// Animate the header on first
-    	
-	$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
+clipboard.on('error', function(e) {
+	$('#email-tooltip').attr("tooltip", "Sorry, there was a technical glitch. Please try again.");
+	$('#email-tooltip').toggleClass('fail');
+});
 
 
-	// Copy email address to clipboard	
-	var clipboard = new ClipboardJS('#email');
+// Preload the page with jPreLoader
+$('body').jpreLoader({
 
-	clipboard.on('success', function(e) {
-	    $('#email-tooltip').attr("tooltip", "Yay! My email address has been copied to your clipboard ✅");
-	    $('#email-tooltip').addClass('success');
+	showSplash: true
 
-	    // Reset
-	    $('#email-tooltip').mouseleave(function() {
+}, function() {	
 
-		    setTimeout( function(){
-				$('#email-tooltip').attr("tooltip", "Click to copy my email address to your clipboard 😀");
-		    	$('#email-tooltip').removeClass('success');
-			}, 300);
-		});
+	//Show the page once images are loaded	
+	$.when(animatePage()).then($('#thumbs li').animateGallery());
 
-	    e.clearSelection();
-	});
-
-	clipboard.on('error', function(e) {
-	    $('#email-tooltip').attr("tooltip", "Sorry, there was a technical glitch. Please try again.");
-	    $('#email-tooltip').toggleClass('fail');
-	});
-
-
-	// Preload the page with jPreLoader
-	$('body').jpreLoader({
-
-		showSplash: true
-
-	}, function() {	
-
-		//Show the page once images are loaded	
-        $.when(animatePage()).then($('#thumbs li').animateGallery());
-
-			
-	});
+		
+});
 
 });
 
