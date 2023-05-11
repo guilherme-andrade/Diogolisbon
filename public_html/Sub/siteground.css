@@ -137,12 +137,8 @@ margin: 0;
 padding: 0;
 display: flex;
 align-items: center;
-}
+}*/
 
-ul.social li {
-list-style: none;
-margin-right: 20px; /* Add some margin to the right of the social icons 
-} 
 /* spinning =================================================== */
 .scene {
   width: 500px;
@@ -456,7 +452,7 @@ header nav li a {
 .social li a:hover {
   opacity: 0.5;
 }
-.social .facebook a {
+.social .GitHub a {
   background-position: 0px -186px;
 }
 .social .twitter a {
