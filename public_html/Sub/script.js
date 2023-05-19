@@ -1584,4 +1584,31 @@ function ieMessage() {
 
 }
 
+/*CODER DESIGNER POP UP*/
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+
+window.addEventListener("scroll", function() {
+
+    var popup = document.querySelector(".popup");
+    var coderSectionTop = coderSection.offsetTop;
+    var scrollTop = window.scrollY;
+
+    if (scrollTop >= coderSectionTop) {
+        popup.style.display = "block";
+    } else {
+        popup.style.display = "none";
+    }
+});
 
