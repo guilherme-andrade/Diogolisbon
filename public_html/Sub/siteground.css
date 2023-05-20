@@ -1957,244 +1957,7 @@ button:active,
 [tooltip]:hover:before {
   opacity: 1;
 }
-/* Homepage Half Face */
-.face {
-  width: 100%;
-  position: relative;
-  /* Show default image */
-  /* Descriptions */
-  /* Inline media queries */
-  /* Full sliding half face experience */
-}
-.face .face-img {
-  display: block;
-  margin: 0px;
-}
-.face a {
-  color: #757575;
-  text-decoration: none;
-}
-.face .coder,
-.face .designer {
-  position: absolute;
-  width: 40%;
-  display: block;
-  z-index: 10;
-  height: 20%;
-  /* vertical centering */
-  margin: auto;
-  top: 0;
-  bottom: 0;
-}
-.face .coder h1,
-.face .designer h1 {
-  display: none;
-}
-.face .designer {
-  left: 0;
-}
-.face .coder {
-  right: 0;
-  text-align: right;
-}
-.face .designer-img,
-.face .coder-img,
-.face .designer-bg,
-.face .coder-bg,
-.face .coder p,
-.face .designer p {
-  display: none;
-}
-@media only screen and (min-width: 320px) {
-  .face .coder h1,
-  .face .designer h1 {
-    display: block;
-    font-size: 22px;
-    font-size: 2.2rem;
-  }
-  .face .coder h1 span,
-  .face .designer h1 span {
-    line-height: 1;
-  }
-  .face .coder h1 span.chevron-left,
-  .face .designer h1 span.chevron-left {
-    padding: 0 0.1em 0 0;
-  }
-  .face .coder h1 span.chevron-right,
-  .face .designer h1 span.chevron-right {
-    padding: 0 0 0 0.14em;
-  }
-}
-@media only screen and (min-width: 375px) {
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 26px;
-    font-size: 2.6rem;
-  }
-}
-@media only screen and (min-width: 414px) {
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 30px;
-    font-size: 3rem;
-  }
-}
-@media only screen and (min-width: 500px) {
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 36px;
-    font-size: 3.6rem;
-  }
-}
-@media only screen and (min-width: 600px) {
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 46px;
-    font-size: 4.6rem;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .face .coder,
-  .face .designer {
-    width: 30%;
-    height: 44%;
-  }
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 56px;
-    font-size: 5.6rem;
-  }
-  .face .coder p,
-  .face .designer p {
-    display: block;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin: 0px;
-  }
-}
-@media only screen and (min-width: 900px) {
-  .face .coder,
-  .face .designer {
-    width: 32%;
-  }
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 64px;
-    font-size: 6.4rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .face .coder,
-  .face .designer {
-    width: 30%;
-  }
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 72px;
-    font-size: 7.2rem;
-  }
-  .face .coder p,
-  .face .designer p {
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 1.4;
-  }
-}
-@media only screen and (min-width: 1140px) {
-  .face {
-    width: 1040px;
-    height: 600px;
-    position: relative;
-    /* Face images */
-    /* Background images */
-    /* Hide default image with no effects */
-  }
-  .face .coder,
-  .face .designer {
-    width: 520px;
-    height: 600px;
-    top: 0px;
-    position: absolute;
-  }
-  .face .coder h1,
-  .face .designer h1 {
-    font-size: 82px;
-    font-size: 8.2rem;
-  }
-  .face .coder .description,
-  .face .designer .description {
-    position: absolute;
-    top: 180px;
-    width: 290px;
-  }
-  .face .coder .arrow,
-  .face .designer .arrow {
-    width: 85px;
-    height: 140px;
-    background: url() no-repeat;
-    display: block;
-    position: absolute;
-    top: 20px;
-  }
-  .face .coder {
-    text-align: left;
-    right: 0px;
-  }
-  .face .coder .description {
-    right: 0px;
-  }
-  .face .coder .arrow {
-    right: 0px;
-    background-position: 0px -751px;
-  }
-  .face .designer {
-    left: 0px;
-  }
-  .face .designer .description {
-    left: 0px;
-  }
-  .face .designer .arrow {
-    left: 0px;
-    background-position: 0px -892px;
-  }
-  .face .designer-img,
-  .face .coder-img {
-    width: 420px;
-    height: 600px;
-    position: absolute;
-    top: 0;
-    /*background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite-home.png) 0 0 no-repeat;*/
-    display: block;
-    z-index: 1;
-  }
-  .face .designer-img {
-    background-position: 0px -600px;
-    left: 100px;
-  }
-  .face .coder-img {
-    background-position: 100% 0px;
-    right: 100px;
-  }
-  .face .designer-bg,
-  .face .coder-bg {
-    width: 420px;
-    height: 200px;
-    position: absolute;
-    bottom: 0px;
-   /* background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/sprite-home.png) 0 -1300px no-repeat;*/
-    display: block;
-  }
-  .face .designer-bg {
-    left: 100px;
-  }
-  .face .coder-bg {
-    right: 100px;
-    background-position: 100% -1300px;
-  }
-  .face .face-img {
-    display: none;
-  }
-}
+
 /* Form Styles */
 .form {
   /* Mailchimp for WP - Error/warning/success messages */
@@ -2963,42 +2726,57 @@ button:active,
 
 /*pop up*/
 
-
-.popup{
-    background-color: rgba(136, 189, 238, 0.911);
-    width: 420px;
-    padding: 30px 40px;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 50%;
-    border-radius: 8px;
-    font-family: "Poppins",sans-serif;
-    display: none; 
-    text-align: center;
-    color: #000000;
-}
-.popup button{
-    display: block;
-    margin:  0 0 20px auto;
-    background-color: transparent;
-    font-size: 30px;
-    color: #ffffff;
-		background: #03549a;
-		border-radius: 100%;
-		width: 40px;
-		height: 40px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.popup {
+  background-color: rgba(136, 189, 238, 0.911);
+  width: 420px;
+  padding: 30px 40px;
+  position: relative;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  font-family: "Poppins",sans-serif;
+  display: none;
+  text-align: center;
+  color: #000000;
 }
 
-.popup p{
-    font-size: 14px;
-    text-align: justify;
-    margin: 20px 0;
-    line-height: 25px;
+.popup .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #03549a;
+  color: #ffffff;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
 }
+
+.popup p {
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
+}
+
+.be {
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #0f72e5;
+  border-radius: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+
 
 
  /*best coding skills letters*/
