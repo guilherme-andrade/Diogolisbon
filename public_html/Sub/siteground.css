@@ -226,6 +226,8 @@ align-items: center;
   display: block;
 }
 
+
+
 /* */
 .clearfix,
 section,
@@ -667,6 +669,7 @@ a:hover,
 a:active {
   color: #757575;
 }
+
 /* Centered header with line */
 .header-center {
   height: 1px;
@@ -2348,7 +2351,6 @@ button:active,
     list-style: none;
     height: 450px;
     position: relative;
-   /* background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/axis.png) repeat-x;*/
     padding: 0;
     margin: 0px;
     /* Y Axis */
@@ -2616,6 +2618,22 @@ button:active,
   /* snaps */
   
   /* Pie chart */
+
+  .preload.major2 {
+    width:400px; 
+    height: auto; 
+    max-width: 100%; 
+    height: auto; 
+  }
+  
+  
+  @media (max-width: 300px) {
+    .preload.major {
+      max-width: 300px; 
+    }
+  }
+
+  }
   .pie-chart .designer,
   .pie-chart .coder {
     padding-top: 3em;
@@ -2983,7 +3001,7 @@ button:active,
   }
    Contact page navi image 
 	.contact #img-main{
-	/*	background: url(https://www.adhamdannaway.com/wp-content/themes/dannaway/images/adham-dannaway-sky-people.jpg) top left no-repeat;*/
+	
 		display:block;
 		max-width:590px;
 		max-height:500px;
