@@ -98,9 +98,9 @@
 
     <title>Diogo Fernandes Portfolio| Web Designer &amp; Web Developer</title>
 
-	<link rel="stylesheet"  
-	href="/public_html/Sub/siteground.css" 
-	media="all" /> <link rel="preload" href= "/public_html/Sub/siteground.css" as="style">
+	<link rel="stylesheet"
+	href="/Sub/siteground.css"
+	media="all" /> <link rel="preload" href= "/Sub/siteground.css" as="style">
 
 	<script src="https://www.SOMETHING /js/modernizr-2.5.3-min.js"></script>
 
@@ -108,7 +108,7 @@
 
 <!-- CHECK THIS-->
 	<link rel="pingback" href="https://www.OURWEBSITE" />
-	
+
 	<script type="text/javascript">
 
       // Eliminate FOUC
@@ -119,7 +119,7 @@
      <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
  <!--This site is optimized with the Yoast SEO plugin v20.3 - https://yoast.com/wordpress/plugins/seo/ -->
-	
+
 
 
 <link rel='dns-prefetch' href='//ajax.googleapis.com' />
@@ -129,32 +129,32 @@
 
 
 
-   
+
 
 	<header id="top">
 
 		<div class="container">
 
-      <a id="logo" class="logo" href="/public_html/index.html">Diogo Fernandes</a>
+      <a id="logo" class="logo" href="/index.html">Diogo Fernandes</a>
       <div class="icon-nav">navigation</div>
-      
+
       <nav class="navbar">
 
 
         <ul id="nav"  >
-          <li class="about"><a href="/public_html/index.html">about</a></li>
-                      <li class="portfolio is the current_page_item"><a href="/public_html/portfolio/portfolio.html" aria-current="page">portfolio</a></li>
-                      <li class="certificates"><a href="/public_html/certificates.html">certificates</a></li>
-                        <li class="contacts"><a href="/public_html/contact.html">contact</a></li>
- 
+          <li class="about"><a href="/index.html">about</a></li>
+                      <li class="portfolio is the current_page_item"><a href="/portfolio/portfolio.html" aria-current="page">portfolio</a></li>
+                      <li class="certificates"><a href="/certificates.html">certificates</a></li>
+                        <li class="contacts"><a href="/contact.html">contact</a></li>
+
 
 						<li>
 							<ul class="social">
-								<li class="email"><span id="email-tooltip" tooltip="Click to copy my email address to your clipboard 😀"><a id="email" data-clipboard-text="diogo.jmf@outlook.com">email</a></span></li> 
+								<li class="email"><span id="email-tooltip" tooltip="Click to copy my email address to your clipboard 😀"><a id="email" data-clipboard-text="diogo.jmf@outlook.com">email</a></span></li>
 								<li class="linkedin"><a href="https://linkedin.com" title="Connect with me on Linkedin" target="_blank">linkedin</a></li>
 								<li class="GitHub"><a href="https://github.com/Diogolisbon" title="My repositories" target="_blank">Git Hub</a></li>
 								<li class="instagram"><a href="https://www.instagram.com/diogo.matos.fernandes" title="Follow me on Instagram" target="_blank">instagram</a></li>
-								
+
 							</ul>
 						</li>
 
@@ -166,14 +166,14 @@
 
 		</div>
 
-	</header>  
-  
+	</header>
+
 	<div class="content portfolio clearfix">
 
-        <section class="main nopad-b"> 
+        <section class="main nopad-b">
             <div class="row">
-              <div id="text-main" class="col-5 text-main"> 
-                <h1>Voice Generator</h1> 
+              <div id="text-main" class="col-5 text-main">
+                <h1>Voice Generator</h1>
                 <p class="author">Diogo Fernandes <span class="date">March 2023</span></p>
                 <p class="description">Speech Synthesis. Project made it based on the Wes Bos <a href="https://https://github.com/wesbos/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit">Java Script 30 day challenge</a> <a href="https://JavaScript30.com"></br>Check the Website</a>.</p>
               </div>
@@ -183,25 +183,25 @@
             <div class="voiceinator">
 
                 <h2>The Voiceinator 5000</h2>
-          
+
                 <select name="voice" id="voices">
                   <option value="">Select A Voice</option>
                 </select>
-          
+
                 <label for="rate">Rate:</label>
                 <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
-          
+
                 <label for="pitch">Pitch:</label>
-          
+
                 <input name="pitch" type="range" min="0" max="2" step="0.1">
                 <textarea name="text">Hello! This is my portfolio 👍</textarea>
                 <button id="stop">Stop!</button>
                 <button id="speak">Speak</button>
-          
+
               </div>
 
               <style>
-            
+
 }
 
 *, *:before, *:after {
@@ -291,7 +291,7 @@ textarea {
 }
 
               </style>
-          
+
           <script>
             const msg = new SpeechSynthesisUtterance();
             let voices = [];
@@ -300,7 +300,7 @@ textarea {
             const speakButton = document.querySelector('#speak');
             const stopButton = document.querySelector('#stop');
             msg.text = document.querySelector('[name="text"]').value;
-          
+
             function populateVoices() {
               voices = this.getVoices();
               voicesDropdown.innerHTML = voices
@@ -308,41 +308,41 @@ textarea {
                 .map(voice => `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`)
                 .join('');
             }
-          
+
             function setVoice() {
               msg.voice = voices.find(voice => voice.name === this.value);
               toggle();
             }
-          
+
             function toggle(startOver = true) {
               speechSynthesis.cancel();
               if (startOver) {
                 speechSynthesis.speak(msg);
               }
             }
-          
+
             function setOption() {
               console.log(this.name, this.value);
               msg[this.name] = this.value;
               toggle();
             }
-          
+
             speechSynthesis.addEventListener('voiceschanged', populateVoices);
             voicesDropdown.addEventListener('change', setVoice);
             options.forEach(option => option.addEventListener('change', setOption));
             speakButton.addEventListener('click', toggle);
             stopButton.addEventListener('click', () => toggle(false));
-          
+
           </script>
 		<div id="img-main" class="col-7 align-c">
-		
+
 		  </div>
 	  </div>
 
 
   <div id="content-detail">
 
-	
+
 	<section class="dark">
 		<div class="row">
 			<div class="col-12">
@@ -350,11 +350,11 @@ textarea {
 				<div class="header-center"><h3>More from my portfolio</h3></div>
 
 				<ul id="thumbs" class="thumbs clearfix">
-				
-					
+
+
 					<li>
-            <a href="/public_html/portfolio/projects/1-drumkit.html">
-                <img src="/public_html/Sub/imgs/drumkit.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Drum Kit" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/drumkit.jpg 628w, /public_html/Sub/imgs/drumkit.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /> <div class="description">
+            <a href="/portfolio/projects/1-drumkit.html">
+                <img src="/Sub/imgs/drumkit.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Drum Kit" decoding="async" loading="lazy" srcset="/Sub/imgs/drumkit.jpg 628w, /Sub/imgs/drumkit.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /> <div class="description">
                     <span class="arrow-r"></span>
                     <h4>Drum Kit</h4>
                     <p>Playing with the keyboard</p>
@@ -362,11 +362,11 @@ textarea {
             </a>
         </li>
 
-                                                     
+
 
         <li>
-            <a href="/public_html/portfolio/projects/2-ticTacToe.html">
-                <img src="/public_html/Sub/imgs/tictactoe.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Tic Tac Toe" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/tictactoe.jpg 628w, /public_html/Sub/imgs/tictactoe.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /> <div class="description">
+            <a href="/portfolio/projects/2-ticTacToe.html">
+                <img src="/Sub/imgs/tictactoe.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Tic Tac Toe" decoding="async" loading="lazy" srcset="/Sub/imgs/tictactoe.jpg 628w, /Sub/imgs/tictactoe.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /> <div class="description">
                     <span class="arrow-r"></span>
                     <h4>Tic Tac Toe</h4>
                     <p>Play against the system</p>
@@ -374,11 +374,11 @@ textarea {
             </a>
         </li>
 
-                                                     
+
 
         <li>
-            <a href="/public_html/portfolio/projects/3-mouse.html">
-                <img src="/public_html/Sub/imgs/mouse.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Mouse" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/mouse.jpg 628w, /public_html/Sub/imgs/mouse.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
+            <a href="/portfolio/projects/3-mouse.html">
+                <img src="/Sub/imgs/mouse.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Mouse" decoding="async" loading="lazy" srcset="/Sub/imgs/mouse.jpg 628w, /Sub/imgs/mouse.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
                     <span class="arrow-r"></span>
                     <h4>Mouse Mover </h4>
                     <p>Cursor effect </p>
@@ -387,21 +387,21 @@ textarea {
         </li>
 
         <li>
-          <a href="/public_html/portfolio/projects/4-blur.html">
-              <img src="/public_html/Sub/imgs/11.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Blur Spacing" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/11.jpg 628w, /public_html/Sub/imgs/11.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
+          <a href="/portfolio/projects/4-blur.html">
+              <img src="/Sub/imgs/11.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Blur Spacing" decoding="async" loading="lazy" srcset="/Sub/imgs/11.jpg 628w, /Sub/imgs/11.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
                   <span class="arrow-r"></span>
                   <h4>Space-Blur</h4>
                   <p>play with image effects</p>
               </div>
           </a>
       </li>
-					
-												  
+
+
 				</ul>
 
 			</div>
 		</div>
-	
+
 
 </section>
 </div><!-- / content-detail -->
@@ -417,11 +417,11 @@ textarea {
 	<div class="col-12">
 
 		<div class="left"><a class="transition" href="index.html">&copy; 2023 Diogo Fernandes</a></div>
-		
+
 		<nav id="nav-footer">
 
 			<ul>
-				<li class="page_item page-item-2 "><a href="/public_html/index.html" >about</a></li>
+				<li class="page_item page-item-2 "><a href="/index.html" >about</a></li>
 <li class="page_item page-item-7 current_page_item"><a href="portfolio/indexPortfolio.html" aria-current="page">portfolio</a></li>
 <li class="page_item page-item-9"><a href="https://github.com/Diogolisbon">Git Hub</a></li>
 <li class="page_item page-item-11"><a href="contact.html">contact</a></li>
@@ -441,18 +441,18 @@ textarea {
 
 
 
-<script type='text/javascript' src='/public_html/Sub/optimizer.js' id='swv-js'></script>
+<script type='text/javascript' src='/Sub/optimizer.js' id='swv-js'></script>
 <script type='text/javascript' id='contact-form-7-js-extra'>
 /* <![CDATA[ */
 var wpcf7 = {"api":{"root":"https:\/\/...\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='/public_html/Sub/optimizer2.js' id='contact-form-7-js'></script>
+<script type='text/javascript' src='/Sub/optimizer2.js' id='contact-form-7-js'></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script> 
-<script src="/public_html/Sub/clipboard.js"></script>
-<script src="/public_html/Sub/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+<script src="/Sub/clipboard.js"></script>
+<script src="/Sub/script.js"></script>
 <script type="text/javascript">
 
 //If browser is IE8 or older we show IE specific page
@@ -488,14 +488,14 @@ $('a[href=#top]').click(function(){
 $('.thumbs li').hoverThumb();
 
 // Function to animate when leaving page
-$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
+$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();
 
 // Animate the header on first
-	
+
 $('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
 
 
-// Copy email address to clipboard	
+// Copy email address to clipboard
 var clipboard = new ClipboardJS('#email');
 
 clipboard.on('success', function(e) {
@@ -525,12 +525,12 @@ $('body').jpreLoader({
 
 	showSplash: true
 
-}, function() {	
+}, function() {
 
-	//Show the page once images are loaded	
+	//Show the page once images are loaded
 	$.when(animatePage()).then($('#thumbs li').animateGallery());
 
-		
+
 });
 
 });
@@ -543,4 +543,4 @@ $('body').jpreLoader({
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=b678d37e-a438-49a0-8c04-1b28e372c8ec"></script>
 
 </body>
-</html> 
+</html>
