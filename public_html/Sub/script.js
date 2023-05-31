@@ -53,7 +53,7 @@ Changelog:
 		- Added offset function alias: 'bottom-in-view'.
 	v1.0
 		- Initial release.
-
+	
 Support:
 	- jQuery versions 1.4.3+
 	- IE6+, FF3+, Chrome 6+, Safari 4+, Opera 11
@@ -62,12 +62,12 @@ Support:
 
 (function($, wp, wps, window, undefined){
 	'$:nomunge';
-
+	
 	var $w = $(window),
-
+	
 	// Keeping common strings as variables = better minification
 	eventName = 'waypoint.reached',
-
+	
 	/*
 	For the waypoint and direction passed in, trigger the waypoint.reached
 	event and deal with the triggerOnce option.
@@ -78,7 +78,7 @@ Support:
 			way.element[wp]('destroy');
 		}
 	},
-
+	
 	/*
 	Given a jQuery element and Context, returns the index of that element in the waypoints
 	array.  Returns the index, or -1 if the element is not a waypoint.
@@ -91,10 +91,10 @@ Support:
 		}
 		return i;
 	},
-
+	
 	// Private list of all elements used as scrolling contexts for waypoints.
 	contexts = [],
-
+	
 	/*
 	Context Class - represents a scrolling context.  Properties include:
 		element: jQuery object containing a single HTML element.
@@ -108,7 +108,7 @@ Support:
 		$.extend(this, {
 			element: $(context),
 			oldScroll: 0,
-
+			
 			/*
 			List of all elements that have been registered as waypoints.
 			Each object in the array contains:
@@ -117,13 +117,13 @@ Support:
 				options: Options object that was passed to the waypoint fn function.
 			*/
 			'waypoints': [],
-
+			
 			didScroll: false,
 			didResize: false,
-
+	
 			doScroll: $.proxy(function() {
 				var newScroll = this.element.scrollTop(),
-
+				
 				// Are we scrolling up or down? Used for direction argument in callback.
 				isDown = newScroll > this.oldScroll,
 				that = this,
@@ -135,7 +135,7 @@ Support:
 						(el.offset <= that.oldScroll && el.offset > newScroll);
 				}),
 				len = pointsHit.length;
-
+				
 				// iOS adjustment
 				if (!this.oldScroll || !newScroll) {
 					$[wps]('refresh');
@@ -162,7 +162,7 @@ Support:
 				});
 			}, this)
 		});
-
+		
 		// Setup scroll and resize handlers.  Throttled at the settings-defined rate limits.
 		$(context).bind('scroll.waypoints', $.proxy(function() {
 			if (!this.didScroll) {
@@ -181,7 +181,7 @@ Support:
 				}, this), $[wps].settings.resizeThrottle);
 			}
 		}, this));
-
+		
 		$w.load($.proxy(function() {
 			/*
 			Fire a scroll check, should the page be loaded at a non-zero scroll value,
@@ -190,47 +190,47 @@ Support:
 			this.doScroll();
 		}, this));
 	},
-
+	
 	/* Returns a Context object from the contexts array, given the raw HTML element
 	for that context. */
 	getContextByElement = function(element) {
 		var found = null;
-
+		
 		$.each(contexts, function(i, c) {
 			if (c.element[0] === element) {
 				found = c;
 				return false;
 			}
 		});
-
+		
 		return found;
 	},
-
-	// Methods exposed to the effin' object
+	
+	// Methods exposed to the effin' object 
 	methods = {
 		/*
 		jQuery.fn.waypoint([handler], [options])
-
+		
 		handler
 			function, optional
 			A callback function called when the user scrolls past the element.
 			The function signature is function(event, direction) where event is
 			a standard jQuery Event Object and direction is a string, either 'down'
 			or 'up' indicating which direction the user is scrolling.
-
+			
 		options
 			object, optional
 			A map of options to apply to this set of waypoints, including where on
 			the browser window the waypoint is triggered. For a full list of
 			options and their defaults, see $.fn.waypoint.defaults.
-
+			
 		This is how you register an element as a waypoint. When the user scrolls past
 		that element it triggers waypoint.reached, a custom event. Since the
 		parameters for creating a waypoint are optional, we have a few different
 		possible signatures. Letâ€™s look at each of them.
 
 		someElements.waypoint();
-
+			
 		Calling .waypoint with no parameters will register the elements as waypoints
 		using the default options. The elements will fire the waypoint.reached event,
 		but calling it in this way does not bind any handler to the event. You can
@@ -239,7 +239,7 @@ Support:
 		someElements.bind('waypoint.reached', function(event, direction) {
 		   // make it rain
 		});
-
+			
 		You will usually want to create a waypoint and immediately bind a function to
 		waypoint.reached, and can do so by passing a handler as the first argument to
 		.waypoint:
@@ -252,7 +252,7 @@ Support:
 		      // do this on the way back up through the waypoint
 		   }
 		});
-
+			
 		This will still use the default options, which will trigger the waypoint when
 		the top of the element hits the top of the window. We can pass .waypoint an
 		options object to customize things:
@@ -262,13 +262,13 @@ Support:
 		}, {
 		   offset: '50%'  // middle of the page
 		});
-
+			
 		You can also pass just an options object.
 
 		someElements.waypoint({
 		   offset: 100  // 100px from the top
 		});
-
+			
 		This behaves like .waypoint(), in that it registers the elements as waypoints
 		but binds no event handlers.
 
@@ -299,12 +299,12 @@ Support:
 					context = new Context(cElement);
 					contexts.push(context);
 				}
-
+				
 				// Extend default and preexisting options
 				var ndx = waypointIndex($this, context),
 				base = ndx < 0 ? $.fn[wp].defaults : context.waypoints[ndx].options,
 				opts = $.extend({}, base, options);
-
+				
 				// Offset aliases
 				opts.offset = opts.offset === "bottom-in-view" ?
 					function() {
@@ -324,7 +324,7 @@ Support:
 				else {
 					context.waypoints[ndx].options = opts;
 				}
-
+				
 				// Bind the function if it was passed in.
 				if (f) {
 					$this.bind(eventName, f);
@@ -334,17 +334,17 @@ Support:
 					$this.bind(eventName, options.handler);
 				}
 			});
-
+			
 			// Need to re-sort+refresh the waypoints array after new elements are added.
 			$[wps]('refresh');
-
+			
 			return this;
 		},
-
-
+		
+		
 		/*
 		jQuery.fn.waypoint('remove')
-
+		
 		Passing the string 'remove' to .waypoint unregisters the elements as waypoints
 		and wipes any custom options, but leaves the waypoint.reached events bound.
 		Calling .waypoint again in the future would reregister the waypoint and the old
@@ -353,7 +353,7 @@ Support:
 		remove: function() {
 			return this.each(function(i, el) {
 				var $el = $(el);
-
+				
 				$.each(contexts, function(i, c) {
 					var ndx = waypointIndex($el, c);
 
@@ -368,10 +368,10 @@ Support:
 				});
 			});
 		},
-
+		
 		/*
 		jQuery.fn.waypoint('destroy')
-
+		
 		Passing the string 'destroy' to .waypoint will unbind all waypoint.reached
 		event handlers on those elements and unregisters them as waypoints.
 		*/
@@ -379,15 +379,15 @@ Support:
 			return this.unbind(eventName)[wp]('remove');
 		}
 	},
-
+	
 	/*
 	Methods used by the jQuery object extension.
 	*/
 	jQMethods = {
-
+		
 		/*
 		jQuery.waypoints('refresh')
-
+		
 		This will force a recalculation of each waypointâ€™s trigger point based on
 		its offset option and context. This is called automatically whenever the window
 		(or other defined context) is resized, new waypoints are added, or a waypointâ€™s
@@ -400,7 +400,7 @@ Support:
 				contextOffset = isWin ? 0 : c.element.offset().top,
 				contextHeight = isWin ? $[wps]('viewportHeight') : c.element.height(),
 				contextScroll = isWin ? 0 : c.element.scrollTop();
-
+				
 				$.each(c.waypoints, function(j, o) {
 					/* $.each isn't safe from element removal due to triggerOnce.
 					Should rewrite the loop but this is way easier. */
@@ -409,7 +409,7 @@ Support:
 					// Adjustment is just the offset if it's a px value
 					var adjustment = o.options.offset,
 					oldOffset = o.offset;
-
+					
 					// Set adjustment to the return value if offset is a function.
 					if (typeof o.options.offset === "function") {
 						adjustment = o.options.offset.apply(o.element);
@@ -421,7 +421,7 @@ Support:
 							Math.ceil(contextHeight * (amount / 100)) : amount;
 					}
 
-					/*
+					/* 
 					Set the element offset to the window scroll offset, less
 					all our adjustments.
 					*/
@@ -447,18 +447,18 @@ Support:
 						triggerWaypoint(o, ['down']);
 					}
 				});
-
+				
 				// Keep waypoints sorted by offset value.
 				c.waypoints.sort(function(a, b) {
 					return a.offset - b.offset;
 				});
 			});
 		},
-
-
+		
+		
 		/*
 		jQuery.waypoints('viewportHeight')
-
+		
 		This will return the height of the viewport, adjusting for inconsistencies
 		that come with calling $(window).height() in iOS. Recommended for use
 		within any offset functions.
@@ -466,11 +466,11 @@ Support:
 		viewportHeight: function() {
 			return (window.innerHeight ? window.innerHeight : $w.height());
 		},
-
-
+		
+		
 		/*
 		jQuery.waypoints()
-
+		
 		This will return a jQuery object with a collection of all registered waypoint
 		elements.
 
@@ -479,7 +479,7 @@ Support:
 		   // Passed an ad unit
 		});
 		console.log($.waypoints());
-
+		
 		The example above would log a jQuery object containing all .post and .ad-unit
 		elements.
 		*/
@@ -494,12 +494,12 @@ Support:
 		}
 	};
 
-
+	
 	/*
 	fn extension.  Delegates to appropriate method.
 	*/
 	$.fn[wp] = function(method) {
-
+		
 		if (methods[method]) {
 			return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
 		}
@@ -513,12 +513,12 @@ Support:
 			$.error( 'Method ' + method + ' does not exist on jQuery ' + wp );
 		}
 	};
-
-
+	
+	
 	/*
 	The default options object that is extended when calling .waypoint. It has the
 	following properties:
-
+	
 	context
 		string | element | jQuery*
 		default: window
@@ -527,14 +527,14 @@ Support:
 		to the whole viewport.  You can set this to another element to use the waypoints
 		within that element.  Accepts a selector string, *but if you use jQuery 1.6+ it
 		also accepts a raw HTML element or jQuery object.
-
+	
 	continuous
 		boolean
 		default: true
 		If true, and multiple waypoints are triggered in one scroll, this waypoint will
 		trigger even if it is not the last waypoint reached.  If false, it will only
 		trigger if it is the last waypoint.
-
+		
 	handler
 		function
 		default: undefined
@@ -548,25 +548,25 @@ Support:
 		window to trigger a waypoint. It can be a number, which is taken as a number
 		of pixels, a string representing a percentage of the viewport height, or a
 		function that will return a number of pixels.
-
+		
 	onlyOnScroll
 		boolean
 		default: false
 		If true, this waypoint will not trigger if an offset change during a refresh
 		causes it to pass the current scroll point.
-
+		
 	triggerOnce
 		boolean
 		default: false
 		If true, the waypoint will be destroyed when triggered.
-
+	
 	An offset of 250 would trigger the waypoint when the top of the element is 250px
 	from the top of the viewport. Negative values for any offset work as you might
 	expect. A value of -100 would trigger the waypoint when the element is 100px above
 	the top of the window.
 
 	offset: '100%'
-
+	
 	A string percentage will determine the pixel offset based on the height of the
 	window. When resizing the window, this offset will automatically be recalculated
 	without needing to call $.waypoints('refresh').
@@ -575,49 +575,49 @@ Support:
 	offset: function() {
 	   return $.waypoints('viewportHeight') - $(this).outerHeight();
 	}
-
+	
 	Offset can take a function, which must return a number of pixels from the top of
 	the window. The this value will always refer to the raw HTML element of the
 	waypoint. As with % values, functions are recalculated automatically when the
 	window resizes. For more on recalculating offsets, see $.waypoints('refresh').
-
+	
 	An offset value of 'bottom-in-view' will act as an alias for the function in the
 	example above, as this is a common usage.
-
+	
 	offset: 'bottom-in-view'
-
+	
 	You can see this alias in use on the Scroll Analytics example page.
 
 	The triggerOnce flag, if true, will destroy the waypoint after the first trigger.
 	This is just a shortcut for calling .waypoint('destroy') within the waypoint
 	handler. This is useful in situations such as scroll analytics, where you only
 	want to record an event once for each page visit.
-
+	
 	The context option lets you use Waypoints within an element other than the window.
 	You can define the context with a selector string and the waypoint will act within
 	the nearest ancestor that matches this selector.
-
+	
 	$('.something-scrollable .waypoint').waypoint({
 	   context: '.something-scrollable'
 	});
-
+	
 	You can see this in action on the Dial Controls example.
-
+	
 	The handler option gives authors an alternative way to bind functions when
 	creating a waypoint.  In place of:
-
+	
 	$('.item').waypoint(function(event, direction) {
 	   // make things happen
 	});
-
+	
 	You may instead write:
-
+	
 	$('.item').waypoint({
 	   handler: function(event, direction) {
 	      // make things happen
 	   }
 	});
-
+	
 	*/
 	$.fn[wp].defaults = {
 		continuous: true,
@@ -625,11 +625,11 @@ Support:
 		triggerOnce: false,
 		context: window
 	};
-
-
-
-
-
+	
+	
+	
+	
+	
 	/*
 	jQuery object extension. Delegates to appropriate methods above.
 	*/
@@ -641,13 +641,13 @@ Support:
 			return jQMethods['aggregate']();
 		}
 	};
-
-
+	
+	
 	/*
 	$.waypoints.settings
-
+	
 	Settings object that determines some of the pluginâ€™s behavior.
-
+		
 	resizeThrottle
 		number
 		default: 200
@@ -656,7 +656,7 @@ Support:
 		refreshes. For more information on throttling, check out Ben Almanâ€™s
 		throttle / debounce plugin.
 		http://benalman.com/projects/jquery-throttle-debounce-plugin/
-
+		
 	scrollThrottle
 		number
 		default: 100
@@ -670,7 +670,7 @@ Support:
 		resizeThrottle: 200,
 		scrollThrottle: 100
 	};
-
+	
 	$w.load(function() {
 		// Calculate everything once on load.
 		$[wps]('refresh');
@@ -692,7 +692,7 @@ Support:
 		if ($.inArray(type, ['mouseover', 'mouseenter', 'mouseout', 'mouseleave']) == -1) {
 			return this;
 		}
-
+	
 		// build animation options object from arguments
 		// based on internal speed function from jQuery core
 		var opt = typeof speed === 'object' ? speed : {
@@ -700,10 +700,10 @@ Support:
 			duration: speed,
 			easing: callback && easing || easing && !$.isFunction(easing) && easing
 		};
-
+		
 		// run immediately
 		opt.queue = false;
-
+			
 		// wrap original callback and add dequeue
 		var origCallback = opt.complete;
 		opt.complete = function() {
@@ -714,27 +714,27 @@ Support:
 				origCallback.call(this);
 			}
 		};
-
+		
 		// keep the chain intact
 		return this.each(function() {
 			var $this = $(this);
-
+		
 			// set flag when mouse is over element
 			if (type == 'mouseover' || type == 'mouseenter') {
 				$this.data('jQuery.hoverFlow', true);
 			} else {
 				$this.removeData('jQuery.hoverFlow');
 			}
-
+			
 			// enqueue function
-			$this.queue(function() {
+			$this.queue(function() {				
 				// check mouse position at runtime
 				var condition = (type == 'mouseover' || type == 'mouseenter') ?
 					// read: true if mouse is over element
 					$this.data('jQuery.hoverFlow') !== undefined :
 					// read: true if mouse is _not_ over element
 					$this.data('jQuery.hoverFlow') === undefined;
-
+					
 				// only execute animation if condition is met, which is:
 				// - only run mouseover animation if mouse _is_ currently over the element
 				// - only run mouseout animation if the mouse is currently _not_ over the element
@@ -758,10 +758,10 @@ Support:
 *
 * Name:			jPreLoader.js
 * Author:		Kenny Ooi - http://www.inwebson.com
-* Date:			January 01, 2012
+* Date:			January 01, 2012		
 * Version:		1.0
 * Modified:     Only preloads images with class of "preload"
-*
+*	
 */
 (function( $ ){
 
@@ -769,7 +769,7 @@ Support:
 		errors = new Array(),
 		onComplete = function() {},
 		current = 0;
-
+	
 	var jpreOptions = {
 		splashVPos: '35%',
 		loaderVPos: '75%',
@@ -779,7 +779,7 @@ Support:
 		debugMode: false,
 		splashFunction: function() {}
 	}
-
+	
 	var getImages = function(element) {
 		$(element).find('*:not(script)').each(function() {
 			var url = "";
@@ -794,7 +794,7 @@ Support:
 				url = $(this).attr('src');
 			}
 			//console.log(url);
-
+			
 			if (url.length > 0) {
 				items.push(url);
 			}
@@ -806,7 +806,7 @@ Support:
 			loadImg(items[i]);
 		}
 	}
-
+	
 	var loadImg = function(url) {
 		var imgLoad = new Image();
 		$(imgLoad)
@@ -819,7 +819,7 @@ Support:
 		})
 		.attr('src', url);
 	}
-
+	
 	var completeLoading = function() {
 		current++;
 
@@ -827,23 +827,23 @@ Support:
 		$(jBar).stop().animate({
 			height: per + '%'
 		}, 0, 'linear'); // changed duration from 500 to zero
-
+		
 		if(jpreOptions.showPercentage) {
 			$(jPer).text(per+"%");
 		}
-
+		
 		if(current >= items.length) {
-
+		
 			current = items.length;
-
+			
 			if (jpreOptions.debugMode) {
 				var error = debug();
-
-			}
+				
+			} 
 			loadComplete();
 		}
 	}
-
+	
 	var loadComplete = function() {
 		$(jBar).stop().animate({
 			height: '100%'
@@ -852,13 +852,13 @@ Support:
 				$(jOverlay).remove();
 				onComplete();
 			});
-		});
+		});	
 	}
-
+	
 	var debug = function() {
 		if(errors.length > 0) {
 			var str = 'ERROR - IMAGE FILES MISSING!!!\n\r'
-			str	+= errors.length + ' image files cound not be found. \n\r';
+			str	+= errors.length + ' image files cound not be found. \n\r';	
 			str += 'Please check your image paths and filenames:\n\r';
 			for (var i = 0; i < errors.length; i++) {
 				str += '- ' + errors[i] + '\n\r';
@@ -868,33 +868,33 @@ Support:
 			return false;
 		}
 	}
-
+	
 	// create the splash screen overlay
 	var createContainer = function(tar) {
 
 		jOverlay = $('<div></div>')
 		.attr('id', 'jpreOverlay')
 		.appendTo('body');
-
+		
 		if(jpreOptions.showSplash) {
 			jContent = $('<div></div>')
 			.attr('id', 'jpreSlide')
 			.appendTo(jOverlay);
-
+			
 			var conWidth = $(window).width() - $(jContent).width();
 			$(jContent).html($(jpreOptions.splashID).wrap('<div/>').parent().html());
 			$(jpreOptions.splashID).remove();
-			jpreOptions.splashFunction()
+			jpreOptions.splashFunction()			
 		}
-
+		
 		jLoader = $('<div></div>')
 		.attr('id', 'jpreLoader')
 		.appendTo(jOverlay);
-
+		
 		jBar = $('<div></div>')
 		.attr('id', 'jpreBar')
 		.appendTo(jLoader);
-
+		
 		if(jpreOptions.showPercentage) {
 			jPer = $('<div></div>')
 			.attr('id', 'jprePercentage')
@@ -902,7 +902,7 @@ Support:
 			.html('Loading...');
 		}
 	}
-
+	
 	$.fn.jpreLoader = function(options, callback) {
         if(options) {
             $.extend(jpreOptions, options );
@@ -910,7 +910,7 @@ Support:
 		if(typeof callback == 'function') {
 			onComplete = callback;
 		}
-
+		
 		createContainer(this);
 		getImages(this);
 		preloading();
@@ -929,33 +929,33 @@ Support:
  * to offer multiple easing options
  *
  * TERMS OF USE - jQuery Easing
- *
- * Open source under the BSD License.
- *
+ * 
+ * Open source under the BSD License. 
+ * 
  * Copyright Ã‚Â© 2008 George McGinley Smith
  * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, 
  * are permitted provided that the following conditions are met:
- *
- * Redistributions of source code must retain the above copyright notice, this list of
+ * 
+ * Redistributions of source code must retain the above copyright notice, this list of 
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list
- * of conditions and the following disclaimer in the documentation and/or other materials
+ * Redistributions in binary form must reproduce the above copyright notice, this list 
+ * of conditions and the following disclaimer in the documentation and/or other materials 
  * provided with the distribution.
- *
- * Neither the name of the author nor the names of contributors may be used to endorse
+ * 
+ * Neither the name of the author nor the names of contributors may be used to endorse 
  * or promote products derived from this software without specific prior written permission.
- *
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
- * OF THE POSSIBILITY OF SUCH DAMAGE.
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+ * OF THE POSSIBILITY OF SUCH DAMAGE. 
  *
 */
 
@@ -1071,7 +1071,7 @@ jQuery.extend( jQuery.easing,
 		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
 	},
 	easeInOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158;
+		if (s == undefined) s = 1.70158; 
 		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
 		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
 	},
@@ -1103,35 +1103,35 @@ jQuery.extend( jQuery.easing,
  */
 
 
-/*
+/* 
 * Function to fade in image sprites on hover
 */
-$.fn.fadeSprite = function() {
+$.fn.fadeSprite = function() { 	
 
 	this.mouseenter(function(e){
 
 		$(this).find('a').hoverFlow(e.type, {opacity:1}, 300);
-
+            
 	}).mouseleave(function(e){
 
 		$(this).find('a').hoverFlow(e.type, {opacity:0}, 300);
 
-	});
+	});	
 };
 
 
-/*
+/* 
 * Function to animate image thumbnails on hover
 */
-$.fn.hoverThumb = function() {
-
+$.fn.hoverThumb = function() { 	
+  	
 	// only animate for large desktop browsers
 	var pageWidth = window.innerWidth || document.body.clientWidth;
 
   	if(pageWidth >= 1140){
 
 	  	this.mouseenter(function(e){
-
+		
 			$(this).find('.arrow-r').hoverFlow(e.type, {opacity:1, right:0}, 500);
 			//$(this).stop().animate({'opacity':'1'}, 300).siblings().stop().animate({'opacity':'0.5'}, 500);
 			$(this).stop().animate({'opacity':'1'}, 300);
@@ -1140,34 +1140,34 @@ $.fn.hoverThumb = function() {
 
 			$(this).find('.arrow-r').hoverFlow(e.type, {opacity:0, right:10}, 500);
 
-		});
+		});	 
 
 		// once the mouse leaves the whole thumbs div
 		$('#thumbs').mouseleave(function(e){
 
-			// we reset the thumbs
+			// we reset the thumbs 
 			$('#thumbs li').stop().animate({'opacity':'1'}, 500);
 
-		});
+		});	
 
 	}
-};
+};		
 
-/*
+/* 
 * Function to bring in portfolio gallery items one by one
 */
-$.fn.animateGallery = function() {
+$.fn.animateGallery = function() { 	
 
 	$(this).stop().delay(1000).each(function(i){
 		$(this).delay(i * 150).animate({'opacity':'1'}, 300, 'easeOutExpo');
 	});
 };
 
-/*
+/* 
 * Function to animate leaving a page
 */
-$.fn.leavePage = function() {
-
+$.fn.leavePage = function() { 	
+  	
 	this.click(function(event){
 
 		event.preventDefault();
@@ -1176,33 +1176,33 @@ $.fn.leavePage = function() {
 		$('#header').animate({'opacity':'0', 'top':'-92px'}, 500, 'easeOutExpo');
 		$('body').fadeOut(500, function(){
 			window.location = linkLocation;
-		});
-	});
+		});      
+	}); 
 };
 
-/*
+/* 
 * Function to animate content details
 */
-function animateContent() {
+function animateContent() { 
 
-	// show the rest of the content
+	// show the rest of the content		
 	$('#content-detail').css({'opacity':'0', 'top':'50px'}).stop().animate({'opacity':'1', 'top':'0px'}, 500, 'easeOutExpo');
 	$('#footer').css({'opacity':'0', 'top':'50px'}).stop().animate({'opacity':'1', 'top':'0px'}, 500, 'easeOutExpo');
 };
 
-/*
+/* 
 * Function to switch face on browser resize
 */
-$.fn.resizeFace = function() {
+$.fn.resizeFace = function() { 
 
 	$(window).resize(function() {
 
 		var pageWidth = window.innerWidth || document.body.clientWidth;
-		//console.log(pageWidth);
+		//console.log(pageWidth);	
 
 	  	// Show large face
 	  	if(pageWidth >= 1140) {
-
+	  		
 	  		$('#designer-img').css({'opacity':'1'});
 	  		$('#coder-img').css({'opacity':'1'});
 	  		$('#designer-bg').css({'opacity':'1'});
@@ -1220,10 +1220,10 @@ $.fn.resizeFace = function() {
 	});
 };
 
-/*
+/* 
 * Function to animate home page
 */
-$.fn.animateHome = function() {
+$.fn.animateHome = function() { 
 
 	// only animate for large desktop browsers
 	var pageWidth = window.innerWidth || document.body.clientWidth;
@@ -1239,20 +1239,20 @@ $.fn.animateHome = function() {
 	      $('#coder').delay(1500).animate({'opacity':'1'}, 500, 'easeOutExpo', function(){ animateFace(); });
 
 	}else{
-
+	    
 	    $('#content').animate({'opacity':'1'}, 500, 'easeOutExpo');
 	    $('#face-img').animate({'opacity':'1'}, 2000, 'easeOutExpo');
 	    $('#designer').delay(1000).animate({'opacity':'1'}, 500, 'easeOutExpo');
 	    $('#coder').delay(1000).animate({'opacity':'1'}, 500, 'easeOutExpo', function(){ animateContent(); });
 
 	}
-};
+}; 
 
 
-/*
+/* 
 * Function to animate main section
 */
-function animateMain() {
+function animateMain() { 
 
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo');
@@ -1268,35 +1268,35 @@ function animateMain() {
 };
 
 
-/*
+/* 
 * Function to animate pages (e.g. single-portfolio.php)
 */
-function animatePage() {
+function animatePage() { 
 
 	$('#text-main').css({'visibility':'visible', 'right':'50%'}).stop().animate({'opacity':'1', 'right':'0%'}, 1000, 'easeOutExpo');
 	$('#img-main').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo', function(){ animateContent(); });
 	$('#img-main2').css({'visibility':'visible', 'left':'50%'}).stop().delay(100).animate({'opacity':'1', 'left':'0%'}, 1000, 'easeOutExpo', function(){ animateContent(); });
 };
 
-/*
+/* 
 * Function to animate contact page (no longer used)
 */
-function animateContact() {
+function animateContact() { 
 
 	var navi = $('#navi');
 	// var pageWidth = window.innerWidth || document.body.clientWidth;
 
-	navi.stop().delay(2000).animate({'opacity':'1'}, 1000, 'easeOutQuad', function(){
-
+	navi.stop().delay(2000).animate({'opacity':'1'}, 1000, 'easeOutQuad', function(){ 
+		
 
 	});
-
+	
 };
 
-/*
+/* 
 * Function to animate about page
 */
-function animateAbout() {
+function animateAbout() { 
 
 	// Animate section 0 (if window height is small enough)
 	if($(window).height() <= 880){
@@ -1371,10 +1371,10 @@ function animateAbout() {
 };
 
 
-/*
+/* 
 * Function to animate featured page
 */
-function animateFeatured() {
+function animateFeatured() { 
 
 	// Animate section 0 (if window height is small enough)
 	if($(window).height() <= 880){
@@ -1435,7 +1435,7 @@ function animateFeatured() {
 
 };
 
-/*
+/* 
 * Function to animate face
 */
 function animateFace() {
@@ -1445,9 +1445,9 @@ function animateFace() {
 	var designerHover	= $('#designer');
 	var coderHover		= $('#coder');
 	var designerDesc	= $('#designer-desc');
-	var coderDesc		= $('#coder-desc');
+	var coderDesc		= $('#coder-desc');	
 	var designerArrow	= $('#designer-arrow');
-	var coderArrow		= $('#coder-arrow');
+	var coderArrow		= $('#coder-arrow');		
 	var designerBg		= $('#designer-bg');
 	var coderBg			= $('#coder-bg');
 	var face 			= $('#face');
@@ -1459,7 +1459,7 @@ function animateFace() {
 	var xp = 520;
 	var loop = 0;
 	frameRate =  30;
-	timeInterval = Math.round( 1000 / frameRate );
+	timeInterval = Math.round( 1000 / frameRate );		
 
 	// Firstly animate the bottom content onto the page
 	animateContent();
@@ -1476,7 +1476,7 @@ function animateFace() {
 		   	relMouseX = mouseX - face.offset().left;
 
 		});
-
+		
 		// Animate the face based on mouse movement
 		loop = setInterval(function(){
 
@@ -1494,7 +1494,7 @@ function animateFace() {
 
 		}, timeInterval );
 
-	}).mouseleave(function(e){
+	}).mouseleave(function(e){ 
 
 		// reset the face to initial state
 		clearInterval(loop);
@@ -1509,12 +1509,12 @@ function animateFace() {
 		coderBg.hoverFlow(e.type, {right:100, opacity: 1}, duration, 'easeOutQuad');
 		designerBg.hoverFlow(e.type, {left:100, opacity: 1}, duration, 'easeOutQuad');
 
-	});
+	}); 
+	
+}; 
 
-};
 
-
-/*
+/* 
 * Function to detect IE
 */
 // ----------------------------------------------------------
@@ -1532,28 +1532,28 @@ function animateFace() {
 //     ie > 7 // IE8, IE9 ...
 //     ie < 9 // Anything less than IE9
 // ----------------------------------------------------------
-
+ 
 // UPDATE: Now using Live NodeList idea from @jdalton
-
+ 
 var ie = (function(){
-
+ 
     var undef,
         v = 3,
         div = document.createElement('div'),
         all = div.getElementsByTagName('i');
-
+ 
     while (
         div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
         all[0]
     );
-
+ 
     return v > 4 ? v : undef;
-
+ 
 }());
 
 
 
-/*
+/* 
 * Function to print IE page
 */
 function ieMessage() {
@@ -1573,12 +1573,12 @@ function ieMessage() {
 	page 	 += "</p>";
 	page 	 += "</div>";
 	page 	 += "<div class='col-7 last'>";
-	page 	 += "<img class='major' src='/Sub/imgs/face.jpg' alt='Diogo Fernandes'>";
+	page 	 += "<img class='major' src='/public_html/Sub/imgs/face.jpg' alt='Diogo Fernandes'>";
 	page 	 += "</div>";
 	page 	 += "</div>";
 	page 	 += "</section>";
-	page 	 += "</div>";
-
+	page 	 += "</div>";		
+	
 	// Print the page
 	$('.content').replaceWith(page);
 
@@ -1590,7 +1590,7 @@ window.addEventListener("load", function(){
         function open(event){
             document.querySelector(".popup").style.display = "block";
         },
-        2000
+        2000 
     )
 });
 

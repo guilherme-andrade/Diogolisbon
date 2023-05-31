@@ -108,8 +108,8 @@ section {
    justify-content: space-between;
   top: 0;
   left: 0;
-  right:0;
-  background-color: #000000;
+  right:0; 
+  background-color: #000000; 
   padding: 0;
 margin: 0 auto;
 max-width: 1200px;
@@ -122,7 +122,7 @@ top: 0;
 left: 0;
 right: 0;
 background-color: #000000;
-z-index: 9999;
+z-index: 9999; 
 }
 
 
@@ -134,7 +134,7 @@ justify-content: space-between;
 padding: 0;
 margin: 0 auto;
 max-width: 1200px;
-padding-left: 25px;
+padding-left: 25px; 
 padding-right: 20px;
 top: 0;
   left: 0;
@@ -251,7 +251,7 @@ align-items: center;
 section,
 .row {
   *zoom: 1;
-
+  
 }
 .clearfix:before,
 section:before,
@@ -342,11 +342,11 @@ footer a {
 }
 .nopad-b {
   padding-bottom: 0 !important;
-
+ 
 }
 .nopad {
   padding: 0 !important;
-
+  
 }
 .margin-b {
   margin-bottom: 7.68rem !important;
@@ -434,7 +434,7 @@ header nav li a {
 .logo {
   height: 62px;
   width: 40px;
-  background: url(/Sub/imgs/mobile.png) 0px -63px no-repeat;
+  background: url(/public_html/Sub/imgs/mobile.png) 0px -63px no-repeat;
   display: block;
   text-indent: -9999px;
   float: left;
@@ -446,7 +446,7 @@ header nav li a {
   width: 27px;
   height: 62px;
   float: right;
-  background: url(/Sub/imgs/mobile.png) -42px -63px no-repeat;
+  background: url(/public_html/Sub/imgs/mobile.png) -42px -63px no-repeat;
   display: block;
   text-indent: -9999px;
 }
@@ -464,7 +464,7 @@ header nav li a {
   width: 3.2rem;
   height: 3.2rem;
   display: inline-block;
-  background: url(/Sub/imgs/mobile.png) 0 0 no-repeat;
+  background: url(/public_html/Sub/imgs/mobile.png) 0 0 no-repeat;
   text-indent: -9999px;
   cursor: pointer;
   padding: 0px;
@@ -541,7 +541,7 @@ footer .gradient-white {
   background-image: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
 }
 footer a.top {
-  background: transparent url(/Sub/imgs/sprite.png) 0 -217px;
+  background: transparent url(/public_html/Sub/imgs/sprite.png) 0 -217px;
   width: 118px;
   height: 90px;
   display: block;
@@ -995,7 +995,7 @@ hr {
   -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.2);
-
+  
 }
 
 .snaps a img {
@@ -1009,8 +1009,8 @@ hr {
   width: 100%;
   height: auto;
   margin-bottom: 0;
-
-
+  
+  
 }
 /*.snaps a:nth-child(0n),*/
 .snaps a:nth-child(3n+1) {
@@ -1659,7 +1659,7 @@ button:active,
 #qLloader {
   width: 100px;
   height: 100px;
-  background: url(/Sub/imgs/loader.png) 0 100% no-repeat;
+  background: url(/public_html/Sub/imgs/loader.png) 0 100% no-repeat;
   position: fixed;
   top: 43%;
   left: 50%;
@@ -1672,7 +1672,7 @@ button:active,
   height: 0%;
   position: absolute;
   bottom: 0px;
-  background: url(/Sub/imgs/loader.png) -100px 100% no-repeat;
+  background: url(/public_html/Sub/imgs/loader.png) -100px 100% no-repeat;
 }
 #jprePercentage,
 #qLpercentage {
@@ -1801,7 +1801,7 @@ button:active,
 		border:#EBD8AB 1px solid;
 		background:#faf6ec;
 		.rounded(3px);
-		color:#946918;
+		color:#946918;		
 	}*/
   /* Sent successfully */
 }
@@ -2048,7 +2048,7 @@ button:active,
   .logo {
     height: 92px;
     width: 62px;
-    background: url(/Sub/imgs/sprite.png) 0px -93px no-repeat;
+    background: url(/public_html/Sub/imgs/sprite.png) 0px -93px no-repeat;
   }
   header nav {
     float: right;
@@ -2290,7 +2290,7 @@ button:active,
     background-image: -ms-linear-gradient(bottom, #bc8e5b, #dcba83);
     background-image: linear-gradient(#dcba83, #bc8e5b);
   }
-
+  
   .bar-chart .red {
     border-color: #e14949;
     background-color: #ca4544;
@@ -2444,20 +2444,20 @@ button:active,
     margin-bottom: 0 !important;
   }
   /* snaps */
-
+  
   /* Pie chart */
 
   .preload.major2 {
-    width:400px;
-    height: auto;
-    max-width: 100%;
-    height: auto;
+    width:400px; 
+    height: auto; 
+    max-width: 100%; 
+    height: auto; 
   }
-
-
+  
+  
   @media (max-width: 200px) {
     .preload.major {
-      max-width: 50%;
+      max-width: 50%; 
     }
   }
 
@@ -2467,12 +2467,12 @@ button:active,
     padding-top: 3em;
   }
   .pie-chart .coder {
-
+ 
     float: right;
     margin-bottom: 0;
     text-align: right;
   }
-
+  
   #part-coder-heading,
   #part-designer-heading {
     position: relative;
@@ -2483,14 +2483,14 @@ button:active,
   #part-designer-heading.falling {
     position: relative;
   }
-
+  
   .fixed {
     position: fixed;
     top: 0;
-
+    
   }
 
-
+  
   @keyframes fall-down {
     0% {
       top: -50px;
@@ -2776,7 +2776,7 @@ button:active,
     width: 59px;
     height: 118px;
     display: block;
-   background: url(/Sub/imgs/sprite.png) no-repeat;
+   background: url(/public_html/Sub/imgs/sprite.png) no-repeat;
     position: fixed;
     top: 45%;
     text-indent: -9999px;
@@ -2793,7 +2793,7 @@ button:active,
   .prev a {
     position: absolute;
     display: block;
-   background: url(/Sub/imgs/sprite.png) no-repeat;*/
+   background: url(/public_html/Sub/imgs/sprite.png) no-repeat;*/
     width: 59px;
     height: 118px;
     z-index: 10;
@@ -2812,7 +2812,7 @@ button:active,
   .thumbs .arrow-r {
     width: 32px;
     height: 32px;
-    background: url(/Sub/imgs/sprite.png) no-repeat;
+    background: url(/public_html/Sub/imgs/sprite.png) no-repeat;
     display: block;
     background-position: -63px -107px;
     position: absolute;
@@ -2828,14 +2828,14 @@ button:active,
   .favicons li:nth-child(4n) {
     margin-right: 1%;
   }
-   Contact page navi image
+   Contact page navi image 
 	.contact #img-main{
-
+	
 		display:block;
 		max-width:590px;
 		max-height:500px;
 		position:relative;
-	}
+	} 
 }
 
 /* Mobile retina */
@@ -2843,18 +2843,18 @@ button:active,
   /* jQuery Preloader */
   #jpreLoader,
   #qLloader {
-   background: url(/Sub/imgs/loader.png) 0 100% no-repeat;
+   background: url(/public_html/Sub/imgs/loader.png) 0 100% no-repeat;
     background-size: 200px 100px;
   }
   #jpreBar,
   #qLbar {
-    background: url(/Sub/imgs/loader.png) -100px 100% no-repeat;
+    background: url(/public_html/Sub/imgs/loader.png) -100px 100% no-repeat;
     background-size: 200px 100px;
   }
   .logo,
   .icon-nav,
   .social li a {
-   background-image: url(/Sub/imgs/mobile.png);
+   background-image: url(/public_html/Sub/imgs/mobile.png);
     background-size: 200px 500px;
   }
   .social-disc li a,
@@ -2865,7 +2865,7 @@ button:active,
   .next a,
   .prev a,
   .blog .author-profile .avatar {
-    background-image: url(/Sub/imgs/sprite.png);
+    background-image: url(/public_html/Sub/imgs/sprite.png);
     background-size: 200px 1200px;
   }
 }
@@ -2874,7 +2874,7 @@ button:active,
   .logo,
   .social li a,
   .blog .author-profile .avatar {
-    background-image: url(/Sub/imgs/sprite.png);
+    background-image: url(/public_html/Sub/imgs/sprite.png);
     background-size: 200px 1200px;
   }
 }
