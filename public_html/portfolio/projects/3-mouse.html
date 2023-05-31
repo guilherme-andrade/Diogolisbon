@@ -100,9 +100,9 @@
 
     <title>Diogo Fernandes Portfolio| Web Designer &amp; Web Developer</title>
 
-	<link rel="stylesheet"
-	href="/Diogolisbon/Sub/siteground.css"
-	media="all" /> <link rel="preload" href= "/Diogolisbon/Sub/siteground.css" as="style">
+	<link rel="stylesheet"  
+	href="/public_html/Sub/siteground.css" 
+	media="all" /> <link rel="preload" href= "/public_html/Sub/siteground.css" as="style">
 
 	<script src="https://www.SOMETHING /js/modernizr-2.5.3-min.js"></script>
 
@@ -110,7 +110,7 @@
 
 <!-- CHECK THIS-->
 	<link rel="pingback" href="https://www.OURWEBSITE" />
-
+	
 	<script type="text/javascript">
 
       // Eliminate FOUC
@@ -121,7 +121,7 @@
      <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
  <!--This site is optimized with the Yoast SEO plugin v20.3 - https://yoast.com/wordpress/plugins/seo/ -->
-
+	
 
 
 <link rel='dns-prefetch' href='//ajax.googleapis.com' />
@@ -132,32 +132,32 @@
 
 
 
-
+   
 
 	<header id="top">
 
 		<div class="container">
 
-            <a id="logo" class="logo" href="/Diogolisbon/index.html">Diogo Fernandes</a>
+            <a id="logo" class="logo" href="/public_html/index.html">Diogo Fernandes</a>
             <div class="icon-nav">navigation</div>
-
+            
             <nav class="navbar">
 
 
                 <ul id="nav"  >
-                    <li class="about"><a href="/Diogolisbon/index.html">about</a></li>
-                    <li class="portfolio is the current_page_item"><a href="/Diogolisbon/portfolio/portfolio.html" aria-current="page">portfolio</a></li>
-                    <li class="certificates"><a href="/Diogolisbon/certificates.html">certificates</a></li>
-                        <li class="contacts"><a href="/Diogolisbon/contact.html">contact</a></li>
-
+                    <li class="about"><a href="/public_html/index.html">about</a></li>
+                    <li class="portfolio is the current_page_item"><a href="/public_html/portfolio/portfolio.html" aria-current="page">portfolio</a></li>
+                    <li class="certificates"><a href="/public_html/certificates.html">certificates</a></li>
+                        <li class="contacts"><a href="/public_html/contact.html">contact</a></li>
+ 
 
 						<li>
 							<ul class="social">
-								<li class="email"><span id="email-tooltip" tooltip="Click to copy my email address to your clipboard 😀"><a id="email" data-clipboard-text="diogo.jmf@outlook.com">email</a></span></li>
+								<li class="email"><span id="email-tooltip" tooltip="Click to copy my email address to your clipboard 😀"><a id="email" data-clipboard-text="diogo.jmf@outlook.com">email</a></span></li> 
 								<li class="linkedin"><a href="https://linkedin.com" title="Connect with me on Linkedin" target="_blank">linkedin</a></li>
 								<li class="GitHub"><a href="https://github.com/Diogolisbon" title="My repositories" target="_blank">Git Hub</a></li>
 								<li class="instagram"><a href="https://www.instagram.com/diogo.matos.fernandes" title="Follow me on Instagram" target="_blank">instagram</a></li>
-
+								
 							</ul>
 						</li>
 
@@ -169,7 +169,7 @@
 
 		</div>
 
-	</header>
+	</header>  
 
 
 	<div class="content portfolio clearfix">
@@ -177,7 +177,7 @@
 		<section class="main ">
 			<div class="row">
 				<div id="text-main" class="col-5 text-main">
-                    <h1>Mouse Mover</h1>
+                    <h1>Mouse Mover</h1> 
                     <p class="author">Diogo Fernandes <span class="date">March 2023</span></p>
                     <p class="description">CSS Text Shadow on Mouse Move Effect. Project made it based on the Wes Bos <a href="https://https://github.com/wesbos/JavaScript30/tree/master/01%20-%20JavaScript%20Drum%20Kit">Java Script 30 day challenge</a> <a href="https://JavaScript30.com"></br>Check the Website</a>.</p>
                   </div>
@@ -188,17 +188,17 @@
             <div class="hero">
                 <h2 contenteditable>🔥WOAH!</h2>
               </div>
-
+            
               <style>
               html {
                 color: black;
                 font-family: sans-serif;
               }
-
+            
               body {
                 margin: 0;
               }
-
+            
               .hero {
                 min-height: 100vh;
                 display: flex;
@@ -206,45 +206,45 @@
                 align-items: center;
                 color: black;
               }
-
+            
               h2 {
                 text-shadow: 10px 10px 0 rgba(0,0,0,1);
                 font-size: 100px;
               }
               </style>
-
+            
             <script>
               const hero = document.querySelector('.hero');
               const text = hero.querySelector('h2');
               const walk = 500; // 500px
-
+            
               function shadow(e) {
                 const { offsetWidth: width, offsetHeight: height } = hero;
                 let { offsetX: x, offsetY: y } = e;
-
+            
                 if (this !== e.target) {
                   x = x + e.target.offsetLeft;
                   y = y + e.target.offsetTop;
                 }
-
+            
                 const xWalk = Math.round((x / width * walk) - (walk / 2));
                 const yWalk = Math.round((y / height * walk) - (walk / 2));
-
+            
                 text.style.textShadow = `
                   ${xWalk}px ${yWalk}px 0 rgba(255,0,255,0.7),
                   ${xWalk * -1}px ${yWalk}px 0 rgba(0,255,255,0.7),
                   ${yWalk}px ${xWalk * -1}px 0 rgba(0,255,0,0.7),
                   ${yWalk * -1}px ${xWalk}px 0 rgba(0,0,255,0.7)
                 `;
-
+            
               }
-
+            
               hero.addEventListener('mousemove', shadow);
             </script>
-
-
+            
+		
             <div id="img-main" class="col-7 align-c">
-
+             
             </div>
         </div>
     </section>
@@ -258,11 +258,11 @@
                     <div class="header-center"><h3>More from my portfolio</h3></div>
 
                     <ul id="thumbs" class="thumbs clearfix">
-
+                                                                     
 
                         <li>
-                            <a href="/Diogolisbon/portfolio/projects/4-blur.html">
-                                <img src="/Diogolisbon/Sub/imgs/11.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Blur Spacing" decoding="async" loading="lazy" srcset="/Diogolisbon/Sub/imgs/11.jpg 628w, /Diogolisbon/Sub/imgs/11.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
+                            <a href="/public_html/portfolio/projects/4-blur.html">
+                                <img src="/public_html/Sub/imgs/11.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Blur Spacing" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/11.jpg 628w, /public_html/Sub/imgs/11.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
                                     <span class="arrow-r"></span>
                                     <h4>Space-Blur</h4>
                                     <p>play with image effects</p>
@@ -270,11 +270,11 @@
                             </a>
                         </li>
 
-
+                                                                     
 
                         <li>
-                            <a href="/Diogolisbon/portfolio/projects/5-CheckBoxes.html">
-                                <img src="/Diogolisbon/Sub/imgs/checkboxes.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Check Boxes" decoding="async" loading="lazy" srcset="/Diogolisbon/Sub/imgs/checkboxes.jpg 628w, /Diogolisbon/Sub/imgs/checkboxes.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
+                            <a href="/public_html/portfolio/projects/5-CheckBoxes.html">
+                                <img src="/public_html/Sub/imgs/checkboxes.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Check Boxes" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/checkboxes.jpg 628w, /public_html/Sub/imgs/checkboxes.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
                                     <span class="arrow-r"></span>
                                     <h4>Check Boxes</h4>
                                     <p>Lists to do</p>
@@ -282,11 +282,11 @@
                             </a>
                         </li>
 
-
+                                                                     
 
                         <li>
-                            <a href="/Diogolisbon/portfolio/projects/6-clickDrag.html">
-                                <img src="/Diogolisbon/Sub/imgs/clickanddrag.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Click and Drag" decoding="async" loading="lazy" srcset="/Diogolisbon/Sub/imgs/clickanddrag.jpg 628w, /Diogolisbon/Sub/imgs/clickanddrag.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
+                            <a href="/public_html/portfolio/projects/6-clickDrag.html">
+                                <img src="/public_html/Sub/imgs/clickanddrag.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Click and Drag" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/clickanddrag.jpg 628w, /public_html/Sub/imgs/clickanddrag.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /><div class="description">
                                     <span class="arrow-r"></span>
                                     <h4>Click and Drag</h4>
                                     <p>move the image</p>
@@ -294,18 +294,18 @@
                             </a>
                         </li>
 
-
+                                                                     
 
                         <li>
-                            <a href="/Diogolisbon/portfolio/projects/7-flex.html">
-                                <img src="/Diogolisbon/Sub/imgs/flex.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Flex" decoding="async" loading="lazy" srcset="/Diogolisbon/Sub/imgs/flex.jpg 628w, /Diogolisbon/Sub/imgs/flex.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /> <div class="description">
+                            <a href="/public_html/portfolio/projects/7-flex.html">
+                                <img src="/public_html/Sub/imgs/flex.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Flex" decoding="async" loading="lazy" srcset="/public_html/Sub/imgs/flex.jpg 628w, /public_html/Sub/imgs/flex.jpg 300w" sizes="(max-width: 628px) 100vw, 628px" /> <div class="description">
                                     <span class="arrow-r"></span>
                                     <h4>Flex images</h4>
                                     <p>move and enlarge</p>
                                 </div>
                             </a>
                         </li>
-
+                                                      
                      </ul>
 
                 </div>
@@ -324,11 +324,11 @@
 		<div class="col-12">
 
 			<div class="left"><a class="transition" href="index.html">&copy; 2023 Diogo Fernandes</a></div>
-
+			
 			<nav id="nav-footer">
 
 				<ul>
-					<li class="page_item page-item-2 "><a href="/Diogolisbon/index.html" >about</a></li>
+					<li class="page_item page-item-2 "><a href="/public_html/index.html" >about</a></li>
 <li class="page_item page-item-7 current_page_item"><a href="portfolio/indexPortfolio.html" aria-current="page">portfolio</a></li>
 <li class="page_item page-item-9"><a href="https://github.com/Diogolisbon">Git Hub</a></li>
 <li class="page_item page-item-11"><a href="contact.html">contact</a></li>
@@ -346,18 +346,18 @@
 
 </footer>
 
-<script type='text/javascript' src='/Diogolisbon/Sub/optimizer.js' id='swv-js'></script>
+<script type='text/javascript' src='/public_html/Sub/optimizer.js' id='swv-js'></script>
 <script type='text/javascript' id='contact-form-7-js-extra'>
 /* <![CDATA[ */
 var wpcf7 = {"api":{"root":"https:\/\/...\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='/Diogolisbon/Sub/optimizer2.js' id='contact-form-7-js'></script>
+<script type='text/javascript' src='/public_html/Sub/optimizer2.js' id='contact-form-7-js'></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-<script src="/Diogolisbon/Sub/clipboard.js"></script>
-<script src="/Diogolisbon/Sub/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script> 
+<script src="/public_html/Sub/clipboard.js"></script>
+<script src="/public_html/Sub/script.js"></script>
 <script type="text/javascript">
 
 //If browser is IE8 or older we show IE specific page
@@ -393,14 +393,14 @@ $(document).ready(function() {
     $('.thumbs li').hoverThumb();
 
 	// Function to animate when leaving page
-	$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();
+	$('.transition, #nav .page_item a, #nav-footer a, #thumbs a, #next a, #prev a, #logo, #face a').leavePage();	
 
 	// Animate the header on first
-
+    	
 	$('#header').stop().animate({'opacity': '1', 'top':'0'}, 1000);
 
 
-	// Copy email address to clipboard
+	// Copy email address to clipboard	
 	var clipboard = new ClipboardJS('#email');
 
 	clipboard.on('success', function(e) {
@@ -430,12 +430,12 @@ $(document).ready(function() {
 
 		showSplash: true
 
-	}, function() {
+	}, function() {	
 
-		//Show the page once images are loaded
+		//Show the page once images are loaded	
         $.when(animatePage()).then($('#thumbs li').animateGallery());
 
-
+			
 	});
 
 });
@@ -448,4 +448,4 @@ $(document).ready(function() {
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=b678d37e-a438-49a0-8c04-1b28e372c8ec"></script>
 
 </body>
-</html>
+</html> 
